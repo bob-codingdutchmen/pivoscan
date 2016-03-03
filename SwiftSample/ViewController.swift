@@ -14,13 +14,14 @@
 
 import UIKit
 import KeychainSwift
+import BarCodeReaderView
 
 
 let kScanditBarcodeScannerAppKey = "GIEGzinOn+WlzV4rVcY/bPQbV92kGmLCMEbqDK1p/2o";
 
-class ViewController: UIViewController, PivoDelegate, SBSScanDelegate, UIAlertViewDelegate {
+class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate, UIAlertViewDelegate {
 
-    @IBOutlet weak var camView: UIView!
+    @IBOutlet weak var camView: BarcodeReaderView!
     
     @IBOutlet weak var storyNameView: UILabel!
     @IBOutlet weak var userLabel: UILabel!
@@ -34,7 +35,6 @@ class ViewController: UIViewController, PivoDelegate, SBSScanDelegate, UIAlertVi
     @IBOutlet weak var labelsLabel: UILabel!
     @IBOutlet weak var overlayButton: UIButton!
     
-    var picker : SBSBarcodePicker?
     var current_story : Story?
     var userId : Int?
     var pivo : PivoController?
@@ -56,7 +56,7 @@ class ViewController: UIViewController, PivoDelegate, SBSScanDelegate, UIAlertVi
     }
     
     @IBAction func overlayPressed(sender: AnyObject) {
-        picker?.startScanning()
+        self.camView.startCapturing()
         overlayButton.hidden = true
     }
     
@@ -125,49 +125,84 @@ class ViewController: UIViewController, PivoDelegate, SBSScanDelegate, UIAlertVi
     }
     
     
-    func barcodePicker(picker: SBSBarcodePicker, didScan session: SBSScanSession) {
+//    func barcodePicker(picker: SBSBarcodePicker, didScan session: SBSScanSession) {
+//        
+//        session.stopScanning();
+//        
+//        let code = session.newlyRecognizedCodes[0] as! SBSCode;
+//        
+//        dispatch_async(dispatch_get_main_queue()) {
+//            var continueScanning = true;
+//            
+//            if let scannedString:String = code.data! {
+//                if scannedString.hasPrefix("#") {
+//                    
+//                    if let story_id:Int = Int(String(scannedString.characters.dropFirst())) {
+//                        if let pivo = self.pivo {
+//                            pivo.get_story_with_id(story_id)
+//                            continueScanning = false
+//                        }
+//                    }
+//                } else if scannedString.characters.count == 32 {
+//                    if self.pivo == nil {
+//                        debugPrint("setting pivo key")
+//                        
+//                        self.keychain!.set(scannedString, forKey: "pivotalapikey")
+//                        self.initializeAPIWithKey(scannedString)
+//                    }
+//                }
+//            }
+//            
+//            if continueScanning {
+//                picker.startScanning()
+//            }
+//            
+//        };
+//    }
+    
+    func barcodeReader(barcodeReader: BarcodeReaderView, didFailReadingWithError error: NSError) {
+        // handle error
+    }
+    
+    func barcodeReader(barcodeReader: BarcodeReaderView, didFinishReadingString info: String) {
+        //handle success reading
+        var continueScanning = true;
+        self.camView.stopCapturing()
         
-        session.stopScanning();
-        
-        let code = session.newlyRecognizedCodes[0] as! SBSCode;
-        
-        dispatch_async(dispatch_get_main_queue()) {
-            var continueScanning = true;
-            
-            if let scannedString:String = code.data! {
-                if scannedString.hasPrefix("#") {
-                    
-                    if let story_id:Int = Int(String(scannedString.characters.dropFirst())) {
-                        if let pivo = self.pivo {
-                            pivo.get_story_with_id(story_id)
-                            continueScanning = false
-                        }
-                    }
-                } else if scannedString.characters.count == 32 {
-                    if self.pivo == nil {
-                        debugPrint("setting pivo key")
-                        
-                        self.keychain!.set(scannedString, forKey: "pivotalapikey")
-                        self.initializeAPIWithKey(scannedString)
+        if let scannedString:String = info {
+            if scannedString.hasPrefix("#") {
+                
+                if let story_id:Int = Int(String(scannedString.characters.dropFirst())) {
+                    if let pivo = self.pivo {
+                        pivo.get_story_with_id(story_id)
+                        continueScanning = false
                     }
                 }
+            } else if scannedString.characters.count == 32 {
+                if self.pivo == nil {
+                    debugPrint("setting pivo key")
+                    
+                    self.keychain!.set(scannedString, forKey: "pivotalapikey")
+                    self.initializeAPIWithKey(scannedString)
+                }
             }
-            
-            if continueScanning {
-                picker.startScanning()
-            }
-            
-        };
+        }
+        
+        if continueScanning {
+            self.camView.startCapturing()
+        }
     }
+    
     
     @IBAction func openStoryButtonPressed(sender: AnyObject) {
         if let story: Story = self.current_story {
-            UIApplication.sharedApplication().openURL(NSURL(string: story.url!)!)
+            let urlString: NSString = NSString(format: "pivotaltracker://s/%d", story.id!)
+            UIApplication.sharedApplication().openURL(NSURL(string: urlString as String)!)
         }
     }
     
     func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
-        picker?.startScanning();
+        self.camView.startCapturing()
     }
     
     func initializeAPIWithKey(key: String) {
@@ -188,46 +223,11 @@ class ViewController: UIViewController, PivoDelegate, SBSScanDelegate, UIAlertVi
             initializeAPIWithKey(pivokey!)
         }
         
-        
-        
-
-        SBSLicense.setAppKey(kScanditBarcodeScannerAppKey);
-        
-        let settings = SBSScanSettings.pre47DefaultSettings();
-
-        settings.setActiveScanningArea(CGRect(x: 0.25, y: 0.3, width: 0.5, height: 0.4))
-        settings.restrictedAreaScanningEnabled = true
-        
-        let thePicker = SBSBarcodePicker(settings:settings);
-        
-        thePicker.overlayController.setViewfinderColor(0.5, green:0.5, blue: 0.5)
-        thePicker.overlayController.setViewfinderHeight(0.2, width: 0.5, landscapeHeight: 0.5, landscapeWidth: 0.5)
-        thePicker.overlayController.setViewfinderDecodedColor(0.2, green: 1.0, blue: 0.2)
-
-        
-        thePicker.allowedInterfaceOrientations = UIInterfaceOrientationMask.Portrait;
-        
-        thePicker.scanDelegate = self;
-        thePicker.startScanning();
-        
-        picker = thePicker;
-        let pickerView = picker!.view
-        self.camView.addSubview(pickerView)
+        self.camView.delegate = self
+        self.camView.barCodeTypes = [.Code128]
+        self.camView.startCapturing()
         self.camView.translatesAutoresizingMaskIntoConstraints = false
-        pickerView.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.camView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|[picker]|",
-            options: NSLayoutFormatOptions.DirectionLeftToRight,
-            metrics: nil,
-            views: ["picker": pickerView]
-            ) )
-        self.camView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|[picker]|",
-            options: NSLayoutFormatOptions.DirectionLeftToRight,
-            metrics: nil,
-            views: ["picker": pickerView]
-            ) )
+
         self.overlayButton.hidden = true
     }
 

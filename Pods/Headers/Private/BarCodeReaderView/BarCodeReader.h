@@ -1,0 +1,1 @@
+../../../BarCodeReaderView/BarCodeReader/BarCodeReader.h

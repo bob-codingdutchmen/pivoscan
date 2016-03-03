@@ -1,0 +1,6 @@
+framework module BarCodeReaderView {
+  umbrella header "BarCodeReaderView-umbrella.h"
+
+  export *
+  module * { export * }
+}

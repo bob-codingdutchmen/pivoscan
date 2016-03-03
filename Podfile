@@ -8,5 +8,6 @@ target 'Pivoscan' do
     pod 'Alamofire', '~> 3.0'
     pod 'ScanditSDK'
     pod 'KeychainSwift', '~> 3.0'
+    pod 'BarCodeReaderView'
 end
 

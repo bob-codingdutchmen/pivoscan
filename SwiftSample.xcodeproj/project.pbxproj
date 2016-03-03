@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E1BBF751C789AE200DE822D /* ScanditBarcodeScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E1BBF741C789AE200DE822D /* ScanditBarcodeScanner.framework */; };
-		0E83E8611C78B219007DE8AD /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83E85F1C78B219007DE8AD /* StoryViewController.swift */; };
-		0E83E8621C78B219007DE8AD /* StoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E83E8601C78B219007DE8AD /* StoryViewController.xib */; };
 		0EBB00CE1C88D5DF003C4529 /* bg_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBB00BF1C88D5DF003C4529 /* bg_purple.png */; };
 		0EBB00CF1C88D5DF003C4529 /* bg_purple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBB00C01C88D5DF003C4529 /* bg_purple@2x.png */; };
 		0EBB00D01C88D5DF003C4529 /* bg_purple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBB00C11C88D5DF003C4529 /* bg_purple@3x.png */; };
@@ -32,7 +29,6 @@
 		AAE4C7621B4681650031DF4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4C7611B4681650031DF4F /* ViewController.swift */; };
 		AAE4C7651B4681650031DF4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE4C7631B4681650031DF4F /* Main.storyboard */; };
 		AAE4C7671B4681650031DF4F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE4C7661B4681650031DF4F /* Images.xcassets */; };
-		AAE4C7821B46879F0031DF4F /* ScanditBarcodeScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AAE4C7811B46879F0031DF4F /* ScanditBarcodeScanner.bundle */; };
 		AAE4C78A1B468FA40031DF4F /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE4C7891B468FA40031DF4F /* libiconv.dylib */; };
 		AAE4C78C1B468FA90031DF4F /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE4C78B1B468FA90031DF4F /* libc++.dylib */; };
 		AAE4C78E1B468FAE0031DF4F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE4C78D1B468FAE0031DF4F /* libz.dylib */; };
@@ -41,9 +37,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E1BBF741C789AE200DE822D /* ScanditBarcodeScanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScanditBarcodeScanner.framework; path = ScanditSDK/ScanditBarcodeScanner.framework; sourceTree = "<group>"; };
-		0E83E85F1C78B219007DE8AD /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
-		0E83E8601C78B219007DE8AD /* StoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryViewController.xib; sourceTree = "<group>"; };
 		0EBB00BF1C88D5DF003C4529 /* bg_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_purple.png; sourceTree = "<group>"; };
 		0EBB00C01C88D5DF003C4529 /* bg_purple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_purple@2x.png"; sourceTree = "<group>"; };
 		0EBB00C11C88D5DF003C4529 /* bg_purple@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_purple@3x.png"; sourceTree = "<group>"; };
@@ -72,8 +65,6 @@
 		AAE4C7611B4681650031DF4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AAE4C7641B4681650031DF4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAE4C7661B4681650031DF4F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AAE4C7811B46879F0031DF4F /* ScanditBarcodeScanner.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ScanditBarcodeScanner.bundle; path = ScanditSDK/ScanditBarcodeScanner.framework/Resources/ScanditBarcodeScanner.bundle; sourceTree = "<group>"; };
-		AAE4C7861B468A370031DF4F /* SwiftSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		AAE4C7891B468FA40031DF4F /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		AAE4C78B1B468FA90031DF4F /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		AAE4C78D1B468FAE0031DF4F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -88,7 +79,6 @@
 				AAE4C78E1B468FAE0031DF4F /* libz.dylib in Frameworks */,
 				AAE4C78C1B468FA90031DF4F /* libc++.dylib in Frameworks */,
 				AAE4C78A1B468FA40031DF4F /* libiconv.dylib in Frameworks */,
-				0E1BBF751C789AE200DE822D /* ScanditBarcodeScanner.framework in Frameworks */,
 				8C13E14345BBF822D8E2CE33 /* Pods.framework in Frameworks */,
 				EAAE72BA69188E7F444C558C /* Pods_SwiftSample.framework in Frameworks */,
 				ED324DEB5ED88388823B92D1 /* Pods_Pivoscan.framework in Frameworks */,
@@ -145,7 +135,6 @@
 			children = (
 				AA13470B1BFE118B00B1F2B2 /* Default-568h@2x.png */,
 				AAED27F01B46B51C00DA9911 /* Dependencies */,
-				AAE4C7811B46879F0031DF4F /* ScanditBarcodeScanner.bundle */,
 				AAE4C75C1B4681650031DF4F /* SwiftSample */,
 				AAE4C75B1B4681650031DF4F /* Products */,
 				3E6492D3EC263F19F3597BDF /* Pods */,
@@ -170,10 +159,7 @@
 				AAE4C7631B4681650031DF4F /* Main.storyboard */,
 				AAE4C7661B4681650031DF4F /* Images.xcassets */,
 				AAE4C75D1B4681650031DF4F /* Supporting Files */,
-				AAE4C7861B468A370031DF4F /* SwiftSample-Bridging-Header.h */,
 				0ED7F2491C788CDF0037C989 /* PivoController.swift */,
-				0E83E85F1C78B219007DE8AD /* StoryViewController.swift */,
-				0E83E8601C78B219007DE8AD /* StoryViewController.xib */,
 			);
 			path = SwiftSample;
 			sourceTree = "<group>";
@@ -189,7 +175,6 @@
 		AAED27F01B46B51C00DA9911 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				0E1BBF741C789AE200DE822D /* ScanditBarcodeScanner.framework */,
 				AAE4C78D1B468FAE0031DF4F /* libz.dylib */,
 				AAE4C78B1B468FA90031DF4F /* libc++.dylib */,
 				AAE4C7891B468FA40031DF4F /* libiconv.dylib */,
@@ -260,11 +245,9 @@
 			files = (
 				0EBB00D11C88D5DF003C4529 /* ic_browser.png in Resources */,
 				0EBB00D71C88D5DF003C4529 /* ic_scan.png in Resources */,
-				AAE4C7821B46879F0031DF4F /* ScanditBarcodeScanner.bundle in Resources */,
 				0EBB00D91C88D5DF003C4529 /* ic_scan@3x.png in Resources */,
 				0EBB00D31C88D5DF003C4529 /* ic_browser@3x.png in Resources */,
 				0EBB00DC1C88D5DF003C4529 /* ic_state@3x.png in Resources */,
-				0E83E8621C78B219007DE8AD /* StoryViewController.xib in Resources */,
 				0EBB00CE1C88D5DF003C4529 /* bg_purple.png in Resources */,
 				0EBB00DB1C88D5DF003C4529 /* ic_state@2x.png in Resources */,
 				AA13470C1BFE118B00B1F2B2 /* Default-568h@2x.png in Resources */,
@@ -336,7 +319,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E83E8611C78B219007DE8AD /* StoryViewController.swift in Sources */,
 				AAE4C7621B4681650031DF4F /* ViewController.swift in Sources */,
 				0ED7F24A1C788CDF0037C989 /* PivoController.swift in Sources */,
 				AAE4C7601B4681650031DF4F /* AppDelegate.swift in Sources */,
@@ -465,7 +447,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.scandit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSample/SwiftSample-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -487,7 +469,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.scandit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSample/SwiftSample-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

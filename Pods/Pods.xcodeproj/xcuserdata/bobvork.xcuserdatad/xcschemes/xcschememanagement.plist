@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BarCodeReaderView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>KeychainSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2B76A476C727F8A51D44A2B3D8F65AE</key>
+		<key>B6B5EE9E8AE7438190A4C987B87BE41F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D8C4B035082FE3EF6DA1CF035DFB9C73</key>
+		<key>B77839A15F72D79B96EE4F97386DB8E6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F20F352576C43AFD2B6E390A78E929BF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

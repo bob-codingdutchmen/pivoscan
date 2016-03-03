@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Pivoscan/Alamofire.framework"
+  install_framework "Pods-Pivoscan/BarCodeReaderView.framework"
   install_framework "Pods-Pivoscan/KeychainSwift.framework"
   install_framework "Pods-Pivoscan/ScanditSDK.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Pivoscan/Alamofire.framework"
+  install_framework "Pods-Pivoscan/BarCodeReaderView.framework"
   install_framework "Pods-Pivoscan/KeychainSwift.framework"
   install_framework "Pods-Pivoscan/ScanditSDK.framework"
 fi

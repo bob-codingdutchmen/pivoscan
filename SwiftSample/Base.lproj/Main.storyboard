@@ -21,27 +21,27 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_purple.png" translatesAutoresizingMaskIntoConstraints="NO" id="dUL-2K-cWG">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mp4-0s-ham">
-                                <rect key="frame" x="16" y="20" width="343" height="220"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mp4-0s-ham" customClass="BarcodeReaderView" customModule="BarCodeReaderView">
+                                <rect key="frame" x="16" y="30" width="343" height="216"/>
                                 <color key="backgroundColor" red="0.60350225788531087" green="0.81382074225310386" blue="0.89502208769633507" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xni-4i-vro" userLabel="Story View">
-                                <rect key="frame" x="16" y="239.5" width="343" height="355.5"/>
+                                <rect key="frame" x="16" y="245.5" width="343" height="349.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="headTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="nbL-cv-Ih8">
-                                        <rect key="frame" x="20" y="325" width="32.5" height="14.5"/>
+                                        <rect key="frame" x="20" y="319" width="32.5" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                         <color key="textColor" red="0.15686274509803921" green="0.17254901960784313" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUo-U5-Gat">
-                                        <rect key="frame" x="285" y="322.5" width="37.5" height="17"/>
+                                        <rect key="frame" x="285" y="316.5" width="37.5" height="17"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <color key="textColor" red="0.72941176470588232" green="0.74117647058823533" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyv-kK-qJg">
-                                        <rect key="frame" x="20" y="297" width="40.5" height="19.5"/>
+                                        <rect key="frame" x="20" y="291" width="40.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                         <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -111,7 +111,7 @@
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSe-Z5-2q9">
-                                <rect key="frame" x="16" y="40" width="343" height="200"/>
+                                <rect key="frame" x="16" y="30" width="343" height="216"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="overlayPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9wz-Zh-KfA"/>
@@ -139,19 +139,19 @@
                                     <action selector="stateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="07I-ud-GAh"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIm-Rr-XMF">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIm-Rr-XMF" userLabel="spacer 2">
                                 <rect key="frame" x="111" y="615" width="51.5" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBu-XI-ysh">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBu-XI-ysh" userLabel="spacer 4">
                                 <rect key="frame" x="311" y="615" width="52" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuJ-lr-F32">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuJ-lr-F32" userLabel="spacer 1">
                                 <rect key="frame" x="12" y="615" width="51.5" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYw-5R-nVn">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYw-5R-nVn" userLabel="spacer 3">
                                 <rect key="frame" x="211" y="615" width="52.5" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -172,7 +172,7 @@
                             <constraint firstItem="uBu-XI-ysh" firstAttribute="bottom" secondItem="vYw-5R-nVn" secondAttribute="bottom" id="Nia-ZE-H5w"/>
                             <constraint firstItem="JcN-jk-ilG" firstAttribute="width" secondItem="jJU-Pg-4r1" secondAttribute="width" id="Nos-3V-RzJ"/>
                             <constraint firstItem="JcN-jk-ilG" firstAttribute="height" secondItem="jJU-Pg-4r1" secondAttribute="height" id="OXK-z6-dxb"/>
-                            <constraint firstItem="mp4-0s-ham" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UOg-9U-IEa"/>
+                            <constraint firstItem="mp4-0s-ham" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="UOg-9U-IEa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uBu-XI-ysh" secondAttribute="trailing" constant="-4" id="V93-9K-pJ4"/>
                             <constraint firstItem="aGP-dD-AmO" firstAttribute="leading" secondItem="vYw-5R-nVn" secondAttribute="trailing" constant="7.5" id="WQC-07-PNe"/>
                             <constraint firstItem="Xni-4i-vro" firstAttribute="height" secondItem="mp4-0s-ham" secondAttribute="height" multiplier="1.618" id="Y4c-Hb-36f"/>
@@ -182,7 +182,7 @@
                             <constraint firstItem="nIm-Rr-XMF" firstAttribute="top" secondItem="jJU-Pg-4r1" secondAttribute="top" id="eYY-Ng-pZU"/>
                             <constraint firstItem="Xni-4i-vro" firstAttribute="top" secondItem="mp4-0s-ham" secondAttribute="bottom" id="f9s-Gn-von"/>
                             <constraint firstItem="eSe-Z5-2q9" firstAttribute="trailing" secondItem="mp4-0s-ham" secondAttribute="trailing" id="fZ6-fk-dIm"/>
-                            <constraint firstItem="eSe-Z5-2q9" firstAttribute="top" secondItem="mp4-0s-ham" secondAttribute="top" constant="20" id="gGG-Lt-PjF"/>
+                            <constraint firstItem="eSe-Z5-2q9" firstAttribute="top" secondItem="mp4-0s-ham" secondAttribute="top" id="gGG-Lt-PjF"/>
                             <constraint firstItem="eSe-Z5-2q9" firstAttribute="leading" secondItem="mp4-0s-ham" secondAttribute="leading" id="h2r-8w-Mmw"/>
                             <constraint firstItem="aGP-dD-AmO" firstAttribute="top" secondItem="JcN-jk-ilG" secondAttribute="top" id="hPS-5H-Imb"/>
                             <constraint firstItem="jJU-Pg-4r1" firstAttribute="top" secondItem="zuJ-lr-F32" secondAttribute="top" id="iQq-mG-e80"/>

@@ -7,175 +7,198 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		016E97701BAB96B7DB3C487F50C227CA /* Pods-Pivoscan-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC43082965BCCF08270BDAD6BB11B86 /* Pods-Pivoscan-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		01B2507E8AD7C1775DE32FB0434C85ED /* Pods-Pivoscan-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A53B752F2ED044FCA4BAE63894AE3D /* Pods-Pivoscan-dummy.m */; };
-		023D9E2B24A050BCE1A35DF8F7EEC1C3 /* TegKeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B782633814E8972AA3C2DD858B14599 /* TegKeychainConstants.swift */; };
-		0491A04C9403E6CEC3519FBB38F02863 /* KeychainSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7681E9A72D2A104CC904C3B808226CB5 /* KeychainSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AD3299F88A19A5049D192BE592F47 /* Error.swift */; };
-		16102E4E35FAA0FC4161282FECE56469 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29508AEDE4B3576B1F533D6384691D33 /* Timeline.swift */; };
-		1856AC2171FACA1E34A2633C0B748C78 /* ScanditSDKOverlayController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F35C535AE18AF6D3C84BDC3FE97E04A /* ScanditSDKOverlayController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23407372442EBC433C6AEF5701AD6371 /* camera-swap-icon-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4C78C64151255185FC69FE195B8C92D /* camera-swap-icon-pressed@2x.png */; };
-		2D3405986FC586FA6C0A5E0B6BA7E64E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51341079F80E8219BCB80A5104AAB9D /* Validation.swift */; };
-		34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C806FE3ADA5C055FD353F480DF441D /* NetworkReachabilityManager.swift */; };
-		3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB7F5D1C26AA7E43CD1E46CB165D525 /* ResponseSerialization.swift */; };
-		4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4817F01D3D589D0675D3CCA6F5CD56 /* Manager.swift */; };
-		4611720F334F5B185970DEF8B6D75644 /* poweredby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90507AE0686D92D893E2734CC3727CE8 /* poweredby@2x.png */; };
-		46EE71A539720B9DB2A0088A26FD654B /* ScanditSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A810FF74F59E6A3BA275B18CD27F38EC /* ScanditSDK-dummy.m */; };
-		4C5B68C9D3C21E43DC96A39DF90ED498 /* KeychainSwiftAccessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC4585DFA2FE19294BA1B35BA6129D5 /* KeychainSwiftAccessOptions.swift */; };
-		4C917B6CBD69D9BDA54A27FA3444A324 /* flashlight-turn-off-icon-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8788AF66E14116BAD97D8A3442CD5B3D /* flashlight-turn-off-icon-pressed@2x.png */; };
-		4D37B99F9ADA80BF1BBD5C5010813102 /* camera-swap-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 111D8023439383D72C29E68C0CF7AC30 /* camera-swap-icon-pressed.png */; };
-		54085656A0645D4877CE4BCA55AB2B9B /* ScanditSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 126571A0FAF2CE09C324899E48C5D5D8 /* ScanditSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55EE289A6D3DC8BADD2047D1D0B64DB4 /* flashlight-turn-off-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A96974BFE43CF8CE99E79A7CBE9BF3 /* flashlight-turn-off-icon.png */; };
-		56D6D1614853A4CF86526DE794848B2E /* camera-swap-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20816B426B8DC6641F5B78009DEB6BC3 /* camera-swap-icon@2x.png */; };
-		5789FBD5D955AEB28A49F356914078D0 /* ScanditSDKBarcodePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 755B321807F3F38624AADF78D3A18D68 /* ScanditSDKBarcodePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5BC19E6E0F199276003F0AF96838BCE5 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CC6A3563486374FD01D8EC745E485 /* Upload.swift */; };
-		5CB05FBCB32D21E194B5ECF680CB6AE0 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69B7679BC07116CBE4CDA418A7A4B34 /* Download.swift */; };
-		62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB0C1E3AAD70194648E566F9664BCF /* Response.swift */; };
-		65EE512348B237950F8512F448D27FD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		74D9BC287FBC1CF7A72D31D2A1AB50F4 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFA98EE7853EEA9E7F36F4841328749 /* KeychainSwift.swift */; };
-		76656441F85ECA6F689C0CC4DD7F6C9F /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4DB2615356839DF1F3A8D40C9D0E371E /* en.lproj */; };
-		7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD7671671D1BABC85B0A9FEC39129BA /* ServerTrustPolicy.swift */; };
-		7B8DA1C6DB8DAA644D14A75C35CFE2B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		8B97335A526123E72E2BD792457F4D40 /* flashlight-turn-on-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6236CE2B4542EE31DA9D7E99F83268A4 /* flashlight-turn-on-icon.png */; };
-		8EB11202167FCDDF1257AAAB1D1FB244 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E1243B178AACCA9525337EA5D53B7 /* Alamofire.swift */; };
-		9310F4B12ED0840040DD866F9247BB2F /* KeychainSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FB6205843809FF679015A2A2EA5385 /* KeychainSwift-dummy.m */; };
-		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 52138C2519EB9CF9A4897A822A595BBA /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A46E1EB11DE8762E841F44D62616CB34 /* flashlight-turn-on-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC90F75A633B81C496F212F19046574 /* flashlight-turn-on-icon-pressed.png */; };
-		AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF6387E4E8B2D901EFFE5834FC1B2E /* Result.swift */; };
-		AD74CD06E439F8122D1AD7C0BFE26ADE /* camera-swap-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9332A184F8BABC86336053C74D252496 /* camera-swap-icon.png */; };
-		ADF19C953CE2A7D0B72EC93A81FCCC26 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 798866F816FB82FA090E0F8F510D688C /* Alamofire-dummy.m */; };
-		AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748E51D07AA1DEF17FF160F6E485235 /* Stream.swift */; };
-		B2CDDFC5350BBDE44F4A3EF554159968 /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 964411216FAAFF6481E06403AE8E6C33 /* beep.wav */; };
-		B72F03C1B1786D9967DC9C4109255640 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0211058AB6A6D789F8AB0BCAE3D27EF7 /* de.lproj */; };
+		023D9E2B24A050BCE1A35DF8F7EEC1C3 /* TegKeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DF87F3BB30526D15B0E6ECC6AB23DE /* TegKeychainConstants.swift */; };
+		0491A04C9403E6CEC3519FBB38F02863 /* KeychainSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6468C8EFDBC1CC7E4D718E1183B0675 /* KeychainSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		051AD1829B2189478F8A712EA4D0AF86 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5C81D48B0990C54FE6E2EB0FEB33B2EF /* en.lproj */; };
+		08358A88CDF013471664D2A71C144CFB /* camera-swap-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C46C92E0F7BC99589EDDAC1C69A286C /* camera-swap-icon.png */; };
+		095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD500B0BB2CDB4C6973A9E85306B5488 /* Error.swift */; };
+		100973E13FB4ADB56413637C48462389 /* flashlight-turn-on-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3971E7EB1D74C008C2100DA7818709A1 /* flashlight-turn-on-icon.png */; };
+		13C2B5FF74396E23E9BF9210F34B57AA /* flashlight-turn-off-icon-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD7A113BF92A9C32917A53F4663BFE2 /* flashlight-turn-off-icon-pressed@2x.png */; };
+		16102E4E35FAA0FC4161282FECE56469 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE2515E82F796FFBDBE1974C89C197 /* Timeline.swift */; };
+		273866980A62E48C0A938F90DAEE036F /* camera-swap-icon-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D1B0E1DB42214044DCAE75B40F5634C /* camera-swap-icon-pressed@2x.png */; };
+		2D3405986FC586FA6C0A5E0B6BA7E64E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84594B250C44706DF36195B25B1065C /* Validation.swift */; };
+		2DC0736610714B3F4D54139CFF7C942C /* flashlight-turn-on-icon-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F12032F9E1DE72238E9B5A837B5F980 /* flashlight-turn-on-icon-pressed@2x.png */; };
+		326CE67E9F2C045E03E928AA4B2FAE6B /* Pods-Pivoscan-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A53B752F2ED044FCA4BAE63894AE3D /* Pods-Pivoscan-dummy.m */; };
+		34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1C4544AAC78137A25B052D63E05514 /* NetworkReachabilityManager.swift */; };
+		3CF1BE18C0B8D293DE5DA61F8D2248F5 /* poweredby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98880AAEA8BF6BA1DB778716375399F2 /* poweredby@2x.png */; };
+		3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCEA7C0243685FEBD1E58C4F9DA054 /* ResponseSerialization.swift */; };
+		4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5116D860AACA8CC1ED99CC254768D /* Manager.swift */; };
+		42827B5BA5C307664A0870BCE10BAE67 /* NSError+BarCodeReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A8A669647E6CF28EAECBC933F7A3C /* NSError+BarCodeReaderView.swift */; };
+		4C5B68C9D3C21E43DC96A39DF90ED498 /* KeychainSwiftAccessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426C9C3E6B106E433B5717CD97A24D5 /* KeychainSwiftAccessOptions.swift */; };
+		5BC19E6E0F199276003F0AF96838BCE5 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF761299FB91C86EC85524BB337FFE2D /* Upload.swift */; };
+		5CB05FBCB32D21E194B5ECF680CB6AE0 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D979787A2574FE7A3BF6A74A6FDCC8 /* Download.swift */; };
+		613F30B8514AC82F852BB3DF296AC384 /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 29ABA8E03A4391313AFF6BC54C6A27B1 /* beep.wav */; };
+		62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEED7212DA6207BA1FCB25AF1C545483 /* Response.swift */; };
+		733DCFD616C95F7DB0F6F872D2806EAB /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A74C7EC6A2AD07055E10AC5A01442D8D /* de.lproj */; };
+		74D9BC287FBC1CF7A72D31D2A1AB50F4 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE38F1064EADD1228A1F10314B1E873B /* KeychainSwift.swift */; };
+		7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCC1833EFADBADC5E6D2342C40AB78 /* ServerTrustPolicy.swift */; };
+		8EB11202167FCDDF1257AAAB1D1FB244 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B643FE666FB85476100657650F3CE29 /* Alamofire.swift */; };
+		9310F4B12ED0840040DD866F9247BB2F /* KeychainSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 830A0EF2DC88286D3B8DECDF0957B9CE /* KeychainSwift-dummy.m */; };
+		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 431BD48B4E1C61C4A4D110C603A80B69 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94B6AB8E07CA08D82EC6533B247F9D0C /* poweredby.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA69C0ACF7678A478DFEC6C5B6CAA59 /* poweredby.png */; };
+		9929549B123CAC0DFEFEA334A1FA6538 /* flashlight-turn-off-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9A1EBAAB1C41B20745E03011330E4C /* flashlight-turn-off-icon.png */; };
+		9C86080722558D5F7DEFCB4CC24B09C0 /* BarCodeReaderView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 346CC22D50CACF0DB25CBA25BE09EFC6 /* BarCodeReaderView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D047331DBC4E7AC16070F1FD342ED22 /* BarCodeReader.h in Headers */ = {isa = PBXBuildFile; fileRef = C6CF89820AF39F310DFD7E204C4B0BCD /* BarCodeReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA2907531AB1DFC6E12DD3E56D4ACF78 /* BarCodeReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E26087395018E8A7CE6E6AD36CB85FC /* BarCodeReaderView.swift */; };
+		AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8406EEEE5859655A19B93AB6387275A /* Result.swift */; };
+		AD432566D8003C698E7D8A695768EE18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		ADF19C953CE2A7D0B72EC93A81FCCC26 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A52282DA49FFC08AA461519C0A82D9DB /* Alamofire-dummy.m */; };
+		AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9727B9C3AE409D6182DD95D02201785 /* Stream.swift */; };
+		B064DCD1231BEF7E887DD608C317AAF8 /* ScanditSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A73D3117AEE4940254A88A4BECF6E120 /* ScanditSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC2D452989C789112A08B18111BBF0DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3308AF7E76B51060A2E6000897399D /* Notifications.swift */; };
-		C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3D69CED4901EF176922D4ADA714BC /* ParameterEncoding.swift */; };
-		C6C77399EB83C54468D2205724B9C24E /* flashlight-turn-on-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9B23F90FADD09A47B84DBDEB32026A /* flashlight-turn-on-icon@2x.png */; };
-		C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F243A5DF0C34A46448B78ABC88EAA91 /* MultipartFormData.swift */; };
-		CB1EF05D838844684878446CB95847EF /* flashlight-turn-off-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 447A45DFB22F9E05900DECFFA7E09F16 /* flashlight-turn-off-icon@2x.png */; };
-		DA1E7E118615ED26C3B4CED5F6B503CC /* flashlight-turn-on-icon-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A993E452757EA92AE10F478B1EB3FD /* flashlight-turn-on-icon-pressed@2x.png */; };
-		EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26292ED9E72A333A2C2B814B73C51306 /* Request.swift */; };
+		BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998AAC1E1B14825EBD30261A4165A93C /* Notifications.swift */; };
+		BF6B36ED3D0636B86FB1A6E6198959DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAF79B37AC2E9FD597C57B38C2D6EB /* ParameterEncoding.swift */; };
+		C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4723CC7BFD848754E4A0897CBD79764F /* MultipartFormData.swift */; };
+		D30B91BE52F3D8533402B932329AA563 /* empty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 810E2EE78DFAC771E9E301185C0DE473 /* empty.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D5BD5616291D40BD5FA36D51595A0707 /* ScanditSDKOverlayController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B00B90CCBA818982E326EB955C3F04F /* ScanditSDKOverlayController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA66313EAC7307C566ED54959D1CB625 /* ScanditSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 791CB7546713AE342D1FBAD5F58C7C24 /* ScanditSDK-dummy.m */; };
+		DBE4EA46553612B6842D1A843B7134AE /* camera-swap-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF574E03199EF37D42CED2E221D18F0 /* camera-swap-icon-pressed.png */; };
+		E110BD789FAEAB76078E735E8D50A9F7 /* flashlight-turn-off-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6909984F51F6BE5FDC3DCAD1A50D86 /* flashlight-turn-off-icon-pressed.png */; };
+		ECF5D963252B9E118D66CA833C723472 /* Pods-Pivoscan-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC43082965BCCF08270BDAD6BB11B86 /* Pods-Pivoscan-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED406591B5A0A229EA22EE650EA89870 /* flashlight-turn-on-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B557092E63097E228A36585E4BDD48C4 /* flashlight-turn-on-icon@2x.png */; };
+		EDE5298389CFC4A2915CC5DF4EE0B3A6 /* camera-swap-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECCEE20C1B673039DC51E1060EF9569D /* camera-swap-icon@2x.png */; };
+		EE9B776429A3E41419BCDCD2F4124644 /* BarCodeReaderView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A72378B922AEB5A67D92A91450D0FCE /* BarCodeReaderView-dummy.m */; };
+		EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626C51C7B358A01088A90517405EBD2C /* Request.swift */; };
+		F64A9C2017B04E145BF0DD30549F9757 /* flashlight-turn-on-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 487FC2FE173EEBBE05693710E475768F /* flashlight-turn-on-icon-pressed.png */; };
 		F82198F34DD14753A42F4328CD5E7A6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		FA316BA928F1B10ABD184AFE7ECECED8 /* empty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37208316DB5E47AC74895E3AD2140729 /* empty.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FA925B284136B6CCAB40E0EBF864C916 /* flashlight-turn-off-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = C196966D6E9A973A360E39D94FC504BC /* flashlight-turn-off-icon-pressed.png */; };
-		FE1A7FD48B91ED7B7A9EA33C9F21469E /* poweredby.png in Resources */ = {isa = PBXBuildFile; fileRef = 41580C522CFA39B39FA6168C6843491C /* poweredby.png */; };
+		FDFF3B49C034C029C7FA98244B8F6DA7 /* flashlight-turn-off-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 719C9911463FEDAC1F8B2C938B9B90E9 /* flashlight-turn-off-icon@2x.png */; };
+		FE9350F7BBC159999AD61F385415FB1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		FF33FC2EF963E79907D0AAF22E6B667B /* ScanditSDKBarcodePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = B67010E811AF20CD253F2D6F35A92591 /* ScanditSDKBarcodePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5F9491D83C64A3FF0CF05902A03DD279 /* PBXContainerItemProxy */ = {
+		2BB67C3B0970E823388D8252FB987B2D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
-			remoteInfo = Alamofire;
+			remoteGlobalIDString = B6B5EE9E8AE7438190A4C987B87BE41F;
+			remoteInfo = ScanditSDK;
 		};
-		BF34C49C22083A73C35AD0A63B97C7C0 /* PBXContainerItemProxy */ = {
+		AB7A6FEA54A4B79E60149B37C7467344 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4C698C648EE4D43C6B8BE0BE1FE91737;
 			remoteInfo = KeychainSwift;
 		};
-		EB152BC4D7F195536C3D26084B93D7AF /* PBXContainerItemProxy */ = {
+		EE5212A23741B13BBCB3B449C2468E77 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D8C4B035082FE3EF6DA1CF035DFB9C73;
-			remoteInfo = ScanditSDK;
+			remoteGlobalIDString = F20F352576C43AFD2B6E390A78E929BF;
+			remoteInfo = BarCodeReaderView;
+		};
+		FD94005970E7EED6B9150DA2C3F05FAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
+			remoteInfo = Alamofire;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0211058AB6A6D789F8AB0BCAE3D27EF7 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = de.lproj; path = ScanditSDK/de.lproj; sourceTree = "<group>"; };
+		0131BCC059460EABDC1A768DCE279297 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		024DD035B135A35C1BC8DC1FEB66D92A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EAC1ED41355CB39C98C02827C2F11B4 /* Pods-Pivoscan-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Pivoscan-acknowledgements.markdown"; sourceTree = "<group>"; };
-		111D8023439383D72C29E68C0CF7AC30 /* camera-swap-icon-pressed.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "camera-swap-icon-pressed.png"; path = "ScanditSDK/camera-swap-icon-pressed.png"; sourceTree = "<group>"; };
-		126571A0FAF2CE09C324899E48C5D5D8 /* ScanditSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScanditSDK-umbrella.h"; sourceTree = "<group>"; };
-		129860ECDDA0002EBE1F74131DB99C16 /* ScanditSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScanditSDK.xcconfig; sourceTree = "<group>"; };
-		20816B426B8DC6641F5B78009DEB6BC3 /* camera-swap-icon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "camera-swap-icon@2x.png"; path = "ScanditSDK/camera-swap-icon@2x.png"; sourceTree = "<group>"; };
-		22D0A215F262B545414F8B64EFFE24A5 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		26292ED9E72A333A2C2B814B73C51306 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		29508AEDE4B3576B1F533D6384691D33 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		29EB0C1E3AAD70194648E566F9664BCF /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		2AFFD8F8E69E7D16DB73D3DE9B8F004C /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		2FD3D69CED4901EF176922D4ADA714BC /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		31A993E452757EA92AE10F478B1EB3FD /* flashlight-turn-on-icon-pressed@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-on-icon-pressed@2x.png"; path = "ScanditSDK/flashlight-turn-on-icon-pressed@2x.png"; sourceTree = "<group>"; };
-		324684B4EFFA4F2FBBEFE9F7779CE9B9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37208316DB5E47AC74895E3AD2140729 /* empty.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = empty.cpp; path = ScanditSDK/empty.cpp; sourceTree = "<group>"; };
-		3DC90F75A633B81C496F212F19046574 /* flashlight-turn-on-icon-pressed.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-on-icon-pressed.png"; path = "ScanditSDK/flashlight-turn-on-icon-pressed.png"; sourceTree = "<group>"; };
+		114EA4B6E9A7A9FA08329FECB82A2D16 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15FCEA7C0243685FEBD1E58C4F9DA054 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		17BEA4142AFE37660446BE18CF5805B8 /* ScanditSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ScanditSDK.modulemap; sourceTree = "<group>"; };
+		18F7DCB32075FFC47A38017CB721FF85 /* KeychainSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainSwift.xcconfig; sourceTree = "<group>"; };
+		1B643FE666FB85476100657650F3CE29 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		1D1C4544AAC78137A25B052D63E05514 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		29ABA8E03A4391313AFF6BC54C6A27B1 /* beep.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; name = beep.wav; path = ScanditSDK/beep.wav; sourceTree = "<group>"; };
+		2A72378B922AEB5A67D92A91450D0FCE /* BarCodeReaderView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BarCodeReaderView-dummy.m"; sourceTree = "<group>"; };
+		2D1B0E1DB42214044DCAE75B40F5634C /* camera-swap-icon-pressed@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "camera-swap-icon-pressed@2x.png"; path = "ScanditSDK/camera-swap-icon-pressed@2x.png"; sourceTree = "<group>"; };
+		32A001E44F0B0BC3A4B079B7F282249E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		346CC22D50CACF0DB25CBA25BE09EFC6 /* BarCodeReaderView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BarCodeReaderView-umbrella.h"; sourceTree = "<group>"; };
+		372CFF8A9CDEA6E0B80270091DD1FBC5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3971E7EB1D74C008C2100DA7818709A1 /* flashlight-turn-on-icon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-on-icon.png"; path = "ScanditSDK/flashlight-turn-on-icon.png"; sourceTree = "<group>"; };
+		3C46C92E0F7BC99589EDDAC1C69A286C /* camera-swap-icon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "camera-swap-icon.png"; path = "ScanditSDK/camera-swap-icon.png"; sourceTree = "<group>"; };
+		3CDCC1833EFADBADC5E6D2342C40AB78 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		408AD3299F88A19A5049D192BE592F47 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
-		41580C522CFA39B39FA6168C6843491C /* poweredby.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = poweredby.png; path = ScanditSDK/poweredby.png; sourceTree = "<group>"; };
-		41C806FE3ADA5C055FD353F480DF441D /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		447A45DFB22F9E05900DECFFA7E09F16 /* flashlight-turn-off-icon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-off-icon@2x.png"; path = "ScanditSDK/flashlight-turn-off-icon@2x.png"; sourceTree = "<group>"; };
-		4B3308AF7E76B51060A2E6000897399D /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		4DB2615356839DF1F3A8D40C9D0E371E /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = ScanditSDK/en.lproj; sourceTree = "<group>"; };
+		3F12032F9E1DE72238E9B5A837B5F980 /* flashlight-turn-on-icon-pressed@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-on-icon-pressed@2x.png"; path = "ScanditSDK/flashlight-turn-on-icon-pressed@2x.png"; sourceTree = "<group>"; };
+		425A8A669647E6CF28EAECBC933F7A3C /* NSError+BarCodeReaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSError+BarCodeReaderView.swift"; path = "BarCodeReader/NSError+BarCodeReaderView.swift"; sourceTree = "<group>"; };
+		431BD48B4E1C61C4A4D110C603A80B69 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		4723CC7BFD848754E4A0897CBD79764F /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		487FC2FE173EEBBE05693710E475768F /* flashlight-turn-on-icon-pressed.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-on-icon-pressed.png"; path = "ScanditSDK/flashlight-turn-on-icon-pressed.png"; sourceTree = "<group>"; };
 		4DC43082965BCCF08270BDAD6BB11B86 /* Pods-Pivoscan-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Pivoscan-umbrella.h"; sourceTree = "<group>"; };
 		4F56983EEEA9B96FD5476886C9C87051 /* Pods-Pivoscan-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Pivoscan-frameworks.sh"; sourceTree = "<group>"; };
-		50A96974BFE43CF8CE99E79A7CBE9BF3 /* flashlight-turn-off-icon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-off-icon.png"; path = "ScanditSDK/flashlight-turn-off-icon.png"; sourceTree = "<group>"; };
-		518A87658C49AEFE3BA51E482146DA3E /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		52138C2519EB9CF9A4897A822A595BBA /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		5ECF6387E4E8B2D901EFFE5834FC1B2E /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		6236CE2B4542EE31DA9D7E99F83268A4 /* flashlight-turn-on-icon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-on-icon.png"; path = "ScanditSDK/flashlight-turn-on-icon.png"; sourceTree = "<group>"; };
-		62DC7D320E1590858BE27B2AAD25FEC7 /* Pods_Pivoscan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pivoscan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5884B0DECAE77B3F99114A72FD4EBD63 /* Pods_Pivoscan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pivoscan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C81D48B0990C54FE6E2EB0FEB33B2EF /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = ScanditSDK/en.lproj; sourceTree = "<group>"; };
+		5E9A1EBAAB1C41B20745E03011330E4C /* flashlight-turn-off-icon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-off-icon.png"; path = "ScanditSDK/flashlight-turn-off-icon.png"; sourceTree = "<group>"; };
+		626C51C7B358A01088A90517405EBD2C /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		6441CEEC748D0F8C054390D0A8432D11 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6F243A5DF0C34A46448B78ABC88EAA91 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		755B321807F3F38624AADF78D3A18D68 /* ScanditSDKBarcodePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ScanditSDKBarcodePicker.h; path = ScanditSDK/ScanditSDKBarcodePicker.h; sourceTree = "<group>"; };
-		7681E9A72D2A104CC904C3B808226CB5 /* KeychainSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-umbrella.h"; sourceTree = "<group>"; };
-		7748E51D07AA1DEF17FF160F6E485235 /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
-		798866F816FB82FA090E0F8F510D688C /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		69DF87F3BB30526D15B0E6ECC6AB23DE /* TegKeychainConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TegKeychainConstants.swift; path = KeychainSwift/TegKeychainConstants.swift; sourceTree = "<group>"; };
+		6EAAF79B37AC2E9FD597C57B38C2D6EB /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		719C9911463FEDAC1F8B2C938B9B90E9 /* flashlight-turn-off-icon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-off-icon@2x.png"; path = "ScanditSDK/flashlight-turn-off-icon@2x.png"; sourceTree = "<group>"; };
+		791CB7546713AE342D1FBAD5F58C7C24 /* ScanditSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScanditSDK-dummy.m"; sourceTree = "<group>"; };
 		7A7C9D19D5E4C57BE2F0BE784597C89C /* Pods-Pivoscan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Pivoscan.debug.xcconfig"; sourceTree = "<group>"; };
-		7B782633814E8972AA3C2DD858B14599 /* TegKeychainConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TegKeychainConstants.swift; path = KeychainSwift/TegKeychainConstants.swift; sourceTree = "<group>"; };
+		7B00B90CCBA818982E326EB955C3F04F /* ScanditSDKOverlayController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ScanditSDKOverlayController.h; path = ScanditSDK/ScanditSDKOverlayController.h; sourceTree = "<group>"; };
 		7BA344C5B2499794B006C9522469A5EF /* Pods-Pivoscan.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Pivoscan.modulemap"; sourceTree = "<group>"; };
-		7BD7671671D1BABC85B0A9FEC39129BA /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		8788AF66E14116BAD97D8A3442CD5B3D /* flashlight-turn-off-icon-pressed@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-off-icon-pressed@2x.png"; path = "ScanditSDK/flashlight-turn-off-icon-pressed@2x.png"; sourceTree = "<group>"; };
-		8B6E08063F21AAAFA81AA8DF574B950B /* KeychainSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainSwift.xcconfig; sourceTree = "<group>"; };
-		8F35C535AE18AF6D3C84BDC3FE97E04A /* ScanditSDKOverlayController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ScanditSDKOverlayController.h; path = ScanditSDK/ScanditSDKOverlayController.h; sourceTree = "<group>"; };
-		8F7CC6A3563486374FD01D8EC745E485 /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
-		90507AE0686D92D893E2734CC3727CE8 /* poweredby@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "poweredby@2x.png"; path = "ScanditSDK/poweredby@2x.png"; sourceTree = "<group>"; };
+		810E2EE78DFAC771E9E301185C0DE473 /* empty.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = empty.cpp; path = ScanditSDK/empty.cpp; sourceTree = "<group>"; };
+		830A0EF2DC88286D3B8DECDF0957B9CE /* KeychainSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainSwift-dummy.m"; sourceTree = "<group>"; };
+		8426C9C3E6B106E433B5717CD97A24D5 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwiftAccessOptions.swift; path = KeychainSwift/KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
+		8684320A6F66203453161BB250029EBD /* KeychainSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KeychainSwift.modulemap; sourceTree = "<group>"; };
+		8E26087395018E8A7CE6E6AD36CB85FC /* BarCodeReaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarCodeReaderView.swift; path = BarCodeReader/BarCodeReaderView.swift; sourceTree = "<group>"; };
+		8FC5116D860AACA8CC1ED99CC254768D /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
 		9237D039A030D85FE8ECF0EF164AF2E6 /* Pods-Pivoscan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Pivoscan.release.xcconfig"; sourceTree = "<group>"; };
-		9332A184F8BABC86336053C74D252496 /* camera-swap-icon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "camera-swap-icon.png"; path = "ScanditSDK/camera-swap-icon.png"; sourceTree = "<group>"; };
-		964411216FAAFF6481E06403AE8E6C33 /* beep.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; name = beep.wav; path = ScanditSDK/beep.wav; sourceTree = "<group>"; };
-		990E1243B178AACCA9525337EA5D53B7 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		9AB7F5D1C26AA7E43CD1E46CB165D525 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		A4FB6205843809FF679015A2A2EA5385 /* KeychainSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainSwift-dummy.m"; sourceTree = "<group>"; };
-		A810FF74F59E6A3BA275B18CD27F38EC /* ScanditSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScanditSDK-dummy.m"; sourceTree = "<group>"; };
-		AAC4585DFA2FE19294BA1B35BA6129D5 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwiftAccessOptions.swift; path = KeychainSwift/KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
-		AADF0255E41D3EC3FCC1E15CEDF33061 /* ScanditSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScanditSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABFA98EE7853EEA9E7F36F4841328749 /* KeychainSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwift.swift; path = KeychainSwift/KeychainSwift.swift; sourceTree = "<group>"; };
-		AC9B23F90FADD09A47B84DBDEB32026A /* flashlight-turn-on-icon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-on-icon@2x.png"; path = "ScanditSDK/flashlight-turn-on-icon@2x.png"; sourceTree = "<group>"; };
+		98880AAEA8BF6BA1DB778716375399F2 /* poweredby@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "poweredby@2x.png"; path = "ScanditSDK/poweredby@2x.png"; sourceTree = "<group>"; };
+		998AAC1E1B14825EBD30261A4165A93C /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		9DD6B04F5FBB814052A6D0F076E2FA5F /* KeychainSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-prefix.pch"; sourceTree = "<group>"; };
+		A0FE45AC560AB4FF32C00B81DFCCCD84 /* ScanditSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScanditSDK-prefix.pch"; sourceTree = "<group>"; };
+		A52282DA49FFC08AA461519C0A82D9DB /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		A73D3117AEE4940254A88A4BECF6E120 /* ScanditSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScanditSDK-umbrella.h"; sourceTree = "<group>"; };
+		A74C7EC6A2AD07055E10AC5A01442D8D /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = de.lproj; path = ScanditSDK/de.lproj; sourceTree = "<group>"; };
+		A7EEB9962DA93064B67D24482A7734FB /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		AC071B5AF73E0B1D2A9C83CE26F3A869 /* BarCodeReaderView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BarCodeReaderView-prefix.pch"; sourceTree = "<group>"; };
+		AE38F1064EADD1228A1F10314B1E873B /* KeychainSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwift.swift; path = KeychainSwift/KeychainSwift.swift; sourceTree = "<group>"; };
+		B04AFA5C0CD82FF9A1FC3BEE11D6FA6A /* ScanditSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScanditSDK.xcconfig; sourceTree = "<group>"; };
 		B1E437D24B5F814A62992895D87F959E /* Pods-Pivoscan-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Pivoscan-acknowledgements.plist"; sourceTree = "<group>"; };
+		B557092E63097E228A36585E4BDD48C4 /* flashlight-turn-on-icon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-on-icon@2x.png"; path = "ScanditSDK/flashlight-turn-on-icon@2x.png"; sourceTree = "<group>"; };
+		B67010E811AF20CD253F2D6F35A92591 /* ScanditSDKBarcodePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ScanditSDKBarcodePicker.h; path = ScanditSDK/ScanditSDKBarcodePicker.h; sourceTree = "<group>"; };
+		B7D3C044E12874379258FDC570B3F4EA /* BarCodeReaderView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BarCodeReaderView.xcconfig; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BD9ED64A5AEEC3DC29B3345F14512274 /* KeychainSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C196966D6E9A973A360E39D94FC504BC /* flashlight-turn-off-icon-pressed.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-off-icon-pressed.png"; path = "ScanditSDK/flashlight-turn-off-icon-pressed.png"; sourceTree = "<group>"; };
-		C4C78C64151255185FC69FE195B8C92D /* camera-swap-icon-pressed@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "camera-swap-icon-pressed@2x.png"; path = "ScanditSDK/camera-swap-icon-pressed@2x.png"; sourceTree = "<group>"; };
-		C9C08C0D4B72CDBECF1060738CD9DC58 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D19C06499CD1BEC4AE86924226147731 /* KeychainSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-prefix.pch"; sourceTree = "<group>"; };
-		D1C796768AFB05FA835E931D7A09F398 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5E1D2CF6B12A2859EC3B225C3F64C2F /* KeychainSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KeychainSwift.modulemap; sourceTree = "<group>"; };
-		DE93CCF6D90300FCA97BFFC100DD88F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAF574E03199EF37D42CED2E221D18F0 /* camera-swap-icon-pressed.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "camera-swap-icon-pressed.png"; path = "ScanditSDK/camera-swap-icon-pressed.png"; sourceTree = "<group>"; };
+		BCB16A2A2ECE546426F24E6484B384F6 /* BarCodeReaderView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BarCodeReaderView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEED7212DA6207BA1FCB25AF1C545483 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		BFD7A113BF92A9C32917A53F4663BFE2 /* flashlight-turn-off-icon-pressed@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-off-icon-pressed@2x.png"; path = "ScanditSDK/flashlight-turn-off-icon-pressed@2x.png"; sourceTree = "<group>"; };
+		C225A3BF58FE5B04FFD390BC24A5F90D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6CF89820AF39F310DFD7E204C4B0BCD /* BarCodeReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarCodeReader.h; path = BarCodeReader/BarCodeReader.h; sourceTree = "<group>"; };
+		C8406EEEE5859655A19B93AB6387275A /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		C84594B250C44706DF36195B25B1065C /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		D0D979787A2574FE7A3BF6A74A6FDCC8 /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
+		D6468C8EFDBC1CC7E4D718E1183B0675 /* KeychainSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-umbrella.h"; sourceTree = "<group>"; };
+		D9727B9C3AE409D6182DD95D02201785 /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
+		DD500B0BB2CDB4C6973A9E85306B5488 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
 		E1DB7DC9731C37DEB4A87A9FB32F1DC1 /* Pods-Pivoscan-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Pivoscan-resources.sh"; sourceTree = "<group>"; };
-		E69B7679BC07116CBE4CDA418A7A4B34 /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
-		E7901639FD75F2C69F2D1A9AF6B51E97 /* ScanditSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ScanditSDK.modulemap; sourceTree = "<group>"; };
-		E7CF8FBBABE275C88DC4A387DAC1534E /* ScanditSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScanditSDK-prefix.pch"; sourceTree = "<group>"; };
-		F51341079F80E8219BCB80A5104AAB9D /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		E37C5EB6D79EB8DB752894AE806BE2CE /* KeychainSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA6909984F51F6BE5FDC3DCAD1A50D86 /* flashlight-turn-off-icon-pressed.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "flashlight-turn-off-icon-pressed.png"; path = "ScanditSDK/flashlight-turn-off-icon-pressed.png"; sourceTree = "<group>"; };
+		ECCEE20C1B673039DC51E1060EF9569D /* camera-swap-icon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "camera-swap-icon@2x.png"; path = "ScanditSDK/camera-swap-icon@2x.png"; sourceTree = "<group>"; };
+		EFA69C0ACF7678A478DFEC6C5B6CAA59 /* poweredby.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = poweredby.png; path = ScanditSDK/poweredby.png; sourceTree = "<group>"; };
+		F1543CBB6330B0E1EAF75BD1066B88ED /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		F53B68622E398A69434B171C44963732 /* BarCodeReaderView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BarCodeReaderView.modulemap; sourceTree = "<group>"; };
+		F5BB654CCBDB40BC8BFF90F07534E09E /* ScanditSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScanditSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A53B752F2ED044FCA4BAE63894AE3D /* Pods-Pivoscan-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Pivoscan-dummy.m"; sourceTree = "<group>"; };
-		FB4817F01D3D589D0675D3CCA6F5CD56 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
+		FADE2515E82F796FFBDBE1974C89C197 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		FF761299FB91C86EC85524BB337FFE2D /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6B61449F46E040875F410E534614D3FE /* Frameworks */ = {
+		189223AA28961D8000B13CBDBB75B7B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B8DA1C6DB8DAA644D14A75C35CFE2B0 /* Foundation.framework in Frameworks */,
+				FE9350F7BBC159999AD61F385415FB1E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BAF55CCF4321A2769B121EAC1D10D61 /* Frameworks */ = {
+		9CDC24A6CF4DEC5F083DF80366FBE07E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65EE512348B237950F8512F448D27FD0 /* Foundation.framework in Frameworks */,
+				BF6B36ED3D0636B86FB1A6E6198959DF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,41 +218,73 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CFC096C22C9CC09F2C698B90E36BCDBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD432566D8003C698E7D8A695768EE18 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		193EA0EEDF784A99A158EB048551FD69 /* Alamofire */ = {
+		286E11A6733122FEA380C72D0D639854 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				990E1243B178AACCA9525337EA5D53B7 /* Alamofire.swift */,
-				E69B7679BC07116CBE4CDA418A7A4B34 /* Download.swift */,
-				408AD3299F88A19A5049D192BE592F47 /* Error.swift */,
-				FB4817F01D3D589D0675D3CCA6F5CD56 /* Manager.swift */,
-				6F243A5DF0C34A46448B78ABC88EAA91 /* MultipartFormData.swift */,
-				41C806FE3ADA5C055FD353F480DF441D /* NetworkReachabilityManager.swift */,
-				4B3308AF7E76B51060A2E6000897399D /* Notifications.swift */,
-				2FD3D69CED4901EF176922D4ADA714BC /* ParameterEncoding.swift */,
-				26292ED9E72A333A2C2B814B73C51306 /* Request.swift */,
-				29EB0C1E3AAD70194648E566F9664BCF /* Response.swift */,
-				9AB7F5D1C26AA7E43CD1E46CB165D525 /* ResponseSerialization.swift */,
-				5ECF6387E4E8B2D901EFFE5834FC1B2E /* Result.swift */,
-				7BD7671671D1BABC85B0A9FEC39129BA /* ServerTrustPolicy.swift */,
-				7748E51D07AA1DEF17FF160F6E485235 /* Stream.swift */,
-				29508AEDE4B3576B1F533D6384691D33 /* Timeline.swift */,
-				8F7CC6A3563486374FD01D8EC745E485 /* Upload.swift */,
-				F51341079F80E8219BCB80A5104AAB9D /* Validation.swift */,
-				830059EF8F3616574ABB0EE006B88A67 /* Support Files */,
+				BEEBD5F9A2457E285E70C67BBC855CEC /* Alamofire */,
+				52DAEEC4AEAB2694791E0F0C82738F50 /* BarCodeReaderView */,
+				CA2EB23EF33C9144AD3F383FC1B81474 /* KeychainSwift */,
+				32960C5A2AE32333790AED2A35E2A2E7 /* ScanditSDK */,
 			);
-			path = Alamofire;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		1F4F47CAA5B8142640E6089B8EDFEF48 /* Products */ = {
+		2DF5189EC30D24A3FDF15CCEEB3FC026 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D1C796768AFB05FA835E931D7A09F398 /* Alamofire.framework */,
-				BD9ED64A5AEEC3DC29B3345F14512274 /* KeychainSwift.framework */,
-				62DC7D320E1590858BE27B2AAD25FEC7 /* Pods_Pivoscan.framework */,
-				AADF0255E41D3EC3FCC1E15CEDF33061 /* ScanditSDK.framework */,
+				F1543CBB6330B0E1EAF75BD1066B88ED /* Alamofire.modulemap */,
+				A7EEB9962DA93064B67D24482A7734FB /* Alamofire.xcconfig */,
+				A52282DA49FFC08AA461519C0A82D9DB /* Alamofire-dummy.m */,
+				0131BCC059460EABDC1A768DCE279297 /* Alamofire-prefix.pch */,
+				431BD48B4E1C61C4A4D110C603A80B69 /* Alamofire-umbrella.h */,
+				024DD035B135A35C1BC8DC1FEB66D92A /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		32960C5A2AE32333790AED2A35E2A2E7 /* ScanditSDK */ = {
+			isa = PBXGroup;
+			children = (
+				810E2EE78DFAC771E9E301185C0DE473 /* empty.cpp */,
+				B67010E811AF20CD253F2D6F35A92591 /* ScanditSDKBarcodePicker.h */,
+				7B00B90CCBA818982E326EB955C3F04F /* ScanditSDKOverlayController.h */,
+				966576066FA9ED964DB3822FFE6A4304 /* Resources */,
+				BEF6C2BB2B65CAF82A2A6695207517F1 /* Support Files */,
+			);
+			path = ScanditSDK;
+			sourceTree = "<group>";
+		};
+		52DAEEC4AEAB2694791E0F0C82738F50 /* BarCodeReaderView */ = {
+			isa = PBXGroup;
+			children = (
+				C6CF89820AF39F310DFD7E204C4B0BCD /* BarCodeReader.h */,
+				8E26087395018E8A7CE6E6AD36CB85FC /* BarCodeReaderView.swift */,
+				425A8A669647E6CF28EAECBC933F7A3C /* NSError+BarCodeReaderView.swift */,
+				BAE53E17D9E69CE7A35DCCFDAD61D293 /* Support Files */,
+			);
+			path = BarCodeReaderView;
+			sourceTree = "<group>";
+		};
+		61DF8A1E3371694F305C08A89311C7CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C225A3BF58FE5B04FFD390BC24A5F90D /* Alamofire.framework */,
+				BCB16A2A2ECE546426F24E6484B384F6 /* BarCodeReaderView.framework */,
+				E37C5EB6D79EB8DB752894AE806BE2CE /* KeychainSwift.framework */,
+				5884B0DECAE77B3F99114A72FD4EBD63 /* Pods_Pivoscan.framework */,
+				F5BB654CCBDB40BC8BFF90F07534E09E /* ScanditSDK.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,90 +307,67 @@
 			path = "Target Support Files/Pods-Pivoscan";
 			sourceTree = "<group>";
 		};
-		6EFBCEC300C787980FCC630A94D6E540 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				324684B4EFFA4F2FBBEFE9F7779CE9B9 /* Info.plist */,
-				D5E1D2CF6B12A2859EC3B225C3F64C2F /* KeychainSwift.modulemap */,
-				8B6E08063F21AAAFA81AA8DF574B950B /* KeychainSwift.xcconfig */,
-				A4FB6205843809FF679015A2A2EA5385 /* KeychainSwift-dummy.m */,
-				D19C06499CD1BEC4AE86924226147731 /* KeychainSwift-prefix.pch */,
-				7681E9A72D2A104CC904C3B808226CB5 /* KeychainSwift-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/KeychainSwift";
-			sourceTree = "<group>";
-		};
-		778B508F211FE523F7EFB319D1E0EC2B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DE93CCF6D90300FCA97BFFC100DD88F0 /* Info.plist */,
-				E7901639FD75F2C69F2D1A9AF6B51E97 /* ScanditSDK.modulemap */,
-				129860ECDDA0002EBE1F74131DB99C16 /* ScanditSDK.xcconfig */,
-				A810FF74F59E6A3BA275B18CD27F38EC /* ScanditSDK-dummy.m */,
-				E7CF8FBBABE275C88DC4A387DAC1534E /* ScanditSDK-prefix.pch */,
-				126571A0FAF2CE09C324899E48C5D5D8 /* ScanditSDK-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ScanditSDK";
-			sourceTree = "<group>";
-		};
-		7C09C106F0EEB300B4E96592224E657E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				193EA0EEDF784A99A158EB048551FD69 /* Alamofire */,
-				8593B8A45E4A2E4449CA28BDA679683D /* KeychainSwift */,
-				977489E59BBFF4CE8762B3E7EE2EA741 /* ScanditSDK */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				7C09C106F0EEB300B4E96592224E657E /* Pods */,
-				1F4F47CAA5B8142640E6089B8EDFEF48 /* Products */,
+				286E11A6733122FEA380C72D0D639854 /* Pods */,
+				61DF8A1E3371694F305C08A89311C7CC /* Products */,
 				D596A825028FA011862F495B53A44535 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		830059EF8F3616574ABB0EE006B88A67 /* Support Files */ = {
+		7F6B818025CAA0DA526BCC8031FFF303 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2AFFD8F8E69E7D16DB73D3DE9B8F004C /* Alamofire.modulemap */,
-				22D0A215F262B545414F8B64EFFE24A5 /* Alamofire.xcconfig */,
-				798866F816FB82FA090E0F8F510D688C /* Alamofire-dummy.m */,
-				518A87658C49AEFE3BA51E482146DA3E /* Alamofire-prefix.pch */,
-				52138C2519EB9CF9A4897A822A595BBA /* Alamofire-umbrella.h */,
-				C9C08C0D4B72CDBECF1060738CD9DC58 /* Info.plist */,
+				32A001E44F0B0BC3A4B079B7F282249E /* Info.plist */,
+				8684320A6F66203453161BB250029EBD /* KeychainSwift.modulemap */,
+				18F7DCB32075FFC47A38017CB721FF85 /* KeychainSwift.xcconfig */,
+				830A0EF2DC88286D3B8DECDF0957B9CE /* KeychainSwift-dummy.m */,
+				9DD6B04F5FBB814052A6D0F076E2FA5F /* KeychainSwift-prefix.pch */,
+				D6468C8EFDBC1CC7E4D718E1183B0675 /* KeychainSwift-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Alamofire";
+			path = "../Target Support Files/KeychainSwift";
 			sourceTree = "<group>";
 		};
-		8593B8A45E4A2E4449CA28BDA679683D /* KeychainSwift */ = {
+		966576066FA9ED964DB3822FFE6A4304 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				ABFA98EE7853EEA9E7F36F4841328749 /* KeychainSwift.swift */,
-				AAC4585DFA2FE19294BA1B35BA6129D5 /* KeychainSwiftAccessOptions.swift */,
-				7B782633814E8972AA3C2DD858B14599 /* TegKeychainConstants.swift */,
-				6EFBCEC300C787980FCC630A94D6E540 /* Support Files */,
+				29ABA8E03A4391313AFF6BC54C6A27B1 /* beep.wav */,
+				3C46C92E0F7BC99589EDDAC1C69A286C /* camera-swap-icon.png */,
+				BAF574E03199EF37D42CED2E221D18F0 /* camera-swap-icon-pressed.png */,
+				2D1B0E1DB42214044DCAE75B40F5634C /* camera-swap-icon-pressed@2x.png */,
+				ECCEE20C1B673039DC51E1060EF9569D /* camera-swap-icon@2x.png */,
+				A74C7EC6A2AD07055E10AC5A01442D8D /* de.lproj */,
+				5C81D48B0990C54FE6E2EB0FEB33B2EF /* en.lproj */,
+				5E9A1EBAAB1C41B20745E03011330E4C /* flashlight-turn-off-icon.png */,
+				EA6909984F51F6BE5FDC3DCAD1A50D86 /* flashlight-turn-off-icon-pressed.png */,
+				BFD7A113BF92A9C32917A53F4663BFE2 /* flashlight-turn-off-icon-pressed@2x.png */,
+				719C9911463FEDAC1F8B2C938B9B90E9 /* flashlight-turn-off-icon@2x.png */,
+				3971E7EB1D74C008C2100DA7818709A1 /* flashlight-turn-on-icon.png */,
+				487FC2FE173EEBBE05693710E475768F /* flashlight-turn-on-icon-pressed.png */,
+				3F12032F9E1DE72238E9B5A837B5F980 /* flashlight-turn-on-icon-pressed@2x.png */,
+				B557092E63097E228A36585E4BDD48C4 /* flashlight-turn-on-icon@2x.png */,
+				EFA69C0ACF7678A478DFEC6C5B6CAA59 /* poweredby.png */,
+				98880AAEA8BF6BA1DB778716375399F2 /* poweredby@2x.png */,
 			);
-			path = KeychainSwift;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		977489E59BBFF4CE8762B3E7EE2EA741 /* ScanditSDK */ = {
+		BAE53E17D9E69CE7A35DCCFDAD61D293 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				37208316DB5E47AC74895E3AD2140729 /* empty.cpp */,
-				755B321807F3F38624AADF78D3A18D68 /* ScanditSDKBarcodePicker.h */,
-				8F35C535AE18AF6D3C84BDC3FE97E04A /* ScanditSDKOverlayController.h */,
-				FBB9903AEF74B3BDC1820E9735DB07A7 /* Resources */,
-				778B508F211FE523F7EFB319D1E0EC2B /* Support Files */,
+				F53B68622E398A69434B171C44963732 /* BarCodeReaderView.modulemap */,
+				B7D3C044E12874379258FDC570B3F4EA /* BarCodeReaderView.xcconfig */,
+				2A72378B922AEB5A67D92A91450D0FCE /* BarCodeReaderView-dummy.m */,
+				AC071B5AF73E0B1D2A9C83CE26F3A869 /* BarCodeReaderView-prefix.pch */,
+				346CC22D50CACF0DB25CBA25BE09EFC6 /* BarCodeReaderView-umbrella.h */,
+				114EA4B6E9A7A9FA08329FECB82A2D16 /* Info.plist */,
 			);
-			path = ScanditSDK;
+			name = "Support Files";
+			path = "../Target Support Files/BarCodeReaderView";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -346,12 +378,62 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BEEBD5F9A2457E285E70C67BBC855CEC /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				1B643FE666FB85476100657650F3CE29 /* Alamofire.swift */,
+				D0D979787A2574FE7A3BF6A74A6FDCC8 /* Download.swift */,
+				DD500B0BB2CDB4C6973A9E85306B5488 /* Error.swift */,
+				8FC5116D860AACA8CC1ED99CC254768D /* Manager.swift */,
+				4723CC7BFD848754E4A0897CBD79764F /* MultipartFormData.swift */,
+				1D1C4544AAC78137A25B052D63E05514 /* NetworkReachabilityManager.swift */,
+				998AAC1E1B14825EBD30261A4165A93C /* Notifications.swift */,
+				6EAAF79B37AC2E9FD597C57B38C2D6EB /* ParameterEncoding.swift */,
+				626C51C7B358A01088A90517405EBD2C /* Request.swift */,
+				BEED7212DA6207BA1FCB25AF1C545483 /* Response.swift */,
+				15FCEA7C0243685FEBD1E58C4F9DA054 /* ResponseSerialization.swift */,
+				C8406EEEE5859655A19B93AB6387275A /* Result.swift */,
+				3CDCC1833EFADBADC5E6D2342C40AB78 /* ServerTrustPolicy.swift */,
+				D9727B9C3AE409D6182DD95D02201785 /* Stream.swift */,
+				FADE2515E82F796FFBDBE1974C89C197 /* Timeline.swift */,
+				FF761299FB91C86EC85524BB337FFE2D /* Upload.swift */,
+				C84594B250C44706DF36195B25B1065C /* Validation.swift */,
+				2DF5189EC30D24A3FDF15CCEEB3FC026 /* Support Files */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		BEF6C2BB2B65CAF82A2A6695207517F1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				372CFF8A9CDEA6E0B80270091DD1FBC5 /* Info.plist */,
+				17BEA4142AFE37660446BE18CF5805B8 /* ScanditSDK.modulemap */,
+				B04AFA5C0CD82FF9A1FC3BEE11D6FA6A /* ScanditSDK.xcconfig */,
+				791CB7546713AE342D1FBAD5F58C7C24 /* ScanditSDK-dummy.m */,
+				A0FE45AC560AB4FF32C00B81DFCCCD84 /* ScanditSDK-prefix.pch */,
+				A73D3117AEE4940254A88A4BECF6E120 /* ScanditSDK-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ScanditSDK";
+			sourceTree = "<group>";
+		};
 		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		CA2EB23EF33C9144AD3F383FC1B81474 /* KeychainSwift */ = {
+			isa = PBXGroup;
+			children = (
+				AE38F1064EADD1228A1F10314B1E873B /* KeychainSwift.swift */,
+				8426C9C3E6B106E433B5717CD97A24D5 /* KeychainSwiftAccessOptions.swift */,
+				69DF87F3BB30526D15B0E6ECC6AB23DE /* TegKeychainConstants.swift */,
+				7F6B818025CAA0DA526BCC8031FFF303 /* Support Files */,
+			);
+			path = KeychainSwift;
 			sourceTree = "<group>";
 		};
 		D596A825028FA011862F495B53A44535 /* Targets Support Files */ = {
@@ -362,40 +444,33 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		FBB9903AEF74B3BDC1820E9735DB07A7 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				964411216FAAFF6481E06403AE8E6C33 /* beep.wav */,
-				9332A184F8BABC86336053C74D252496 /* camera-swap-icon.png */,
-				111D8023439383D72C29E68C0CF7AC30 /* camera-swap-icon-pressed.png */,
-				C4C78C64151255185FC69FE195B8C92D /* camera-swap-icon-pressed@2x.png */,
-				20816B426B8DC6641F5B78009DEB6BC3 /* camera-swap-icon@2x.png */,
-				0211058AB6A6D789F8AB0BCAE3D27EF7 /* de.lproj */,
-				4DB2615356839DF1F3A8D40C9D0E371E /* en.lproj */,
-				50A96974BFE43CF8CE99E79A7CBE9BF3 /* flashlight-turn-off-icon.png */,
-				C196966D6E9A973A360E39D94FC504BC /* flashlight-turn-off-icon-pressed.png */,
-				8788AF66E14116BAD97D8A3442CD5B3D /* flashlight-turn-off-icon-pressed@2x.png */,
-				447A45DFB22F9E05900DECFFA7E09F16 /* flashlight-turn-off-icon@2x.png */,
-				6236CE2B4542EE31DA9D7E99F83268A4 /* flashlight-turn-on-icon.png */,
-				3DC90F75A633B81C496F212F19046574 /* flashlight-turn-on-icon-pressed.png */,
-				31A993E452757EA92AE10F478B1EB3FD /* flashlight-turn-on-icon-pressed@2x.png */,
-				AC9B23F90FADD09A47B84DBDEB32026A /* flashlight-turn-on-icon@2x.png */,
-				41580C522CFA39B39FA6168C6843491C /* poweredby.png */,
-				90507AE0686D92D893E2734CC3727CE8 /* poweredby@2x.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		26C1627DD3EDC2DFF6D0868F8E2F4DC8 /* Headers */ = {
+		D74F82E680726ECCB9680A66BF5AFE8E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54085656A0645D4877CE4BCA55AB2B9B /* ScanditSDK-umbrella.h in Headers */,
-				5789FBD5D955AEB28A49F356914078D0 /* ScanditSDKBarcodePicker.h in Headers */,
-				1856AC2171FACA1E34A2633C0B748C78 /* ScanditSDKOverlayController.h in Headers */,
+				9D047331DBC4E7AC16070F1FD342ED22 /* BarCodeReader.h in Headers */,
+				9C86080722558D5F7DEFCB4CC24B09C0 /* BarCodeReaderView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA0820BC6F37706028DE03176920B9E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECF5D963252B9E118D66CA833C723472 /* Pods-Pivoscan-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA1577DCDC71C4EFCF9CA2419E089D2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B064DCD1231BEF7E887DD608C317AAF8 /* ScanditSDK-umbrella.h in Headers */,
+				FF33FC2EF963E79907D0AAF22E6B667B /* ScanditSDKBarcodePicker.h in Headers */,
+				D5BD5616291D40BD5FA36D51595A0707 /* ScanditSDKOverlayController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,14 +487,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F646BE59F2B4E8216C18AED2E78FC9AC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				016E97701BAB96B7DB3C487F50C227CA /* Pods-Pivoscan-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +507,7 @@
 			);
 			name = KeychainSwift;
 			productName = KeychainSwift;
-			productReference = BD9ED64A5AEEC3DC29B3345F14512274 /* KeychainSwift.framework */;
+			productReference = E37C5EB6D79EB8DB752894AE806BE2CE /* KeychainSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */ = {
@@ -457,37 +524,17 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = D1C796768AFB05FA835E931D7A09F398 /* Alamofire.framework */;
+			productReference = C225A3BF58FE5B04FFD390BC24A5F90D /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C2B76A476C727F8A51D44A2B3D8F65AE /* Pods-Pivoscan */ = {
+		B6B5EE9E8AE7438190A4C987B87BE41F /* ScanditSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5748725BF21EAAAA46E3B3EB97D74128 /* Build configuration list for PBXNativeTarget "Pods-Pivoscan" */;
+			buildConfigurationList = 96CCB681A5071C89F81EE8E6146247E0 /* Build configuration list for PBXNativeTarget "ScanditSDK" */;
 			buildPhases = (
-				2D5462E0D83949897BC0DF4B6C21D77E /* Sources */,
-				7BAF55CCF4321A2769B121EAC1D10D61 /* Frameworks */,
-				F646BE59F2B4E8216C18AED2E78FC9AC /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				59DD0879EA0DEFD131A896C645C77F39 /* PBXTargetDependency */,
-				B1AC9F2557175E882CCAF89668180898 /* PBXTargetDependency */,
-				F0EADC9600941EB0A32F3DE54036E8EB /* PBXTargetDependency */,
-			);
-			name = "Pods-Pivoscan";
-			productName = "Pods-Pivoscan";
-			productReference = 62DC7D320E1590858BE27B2AAD25FEC7 /* Pods_Pivoscan.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D8C4B035082FE3EF6DA1CF035DFB9C73 /* ScanditSDK */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C989F4EE5BB390D7661C7EF144EC8ECC /* Build configuration list for PBXNativeTarget "ScanditSDK" */;
-			buildPhases = (
-				E4A1104135CE7E8D3D260CB2938F1E9B /* Sources */,
-				6B61449F46E040875F410E534614D3FE /* Frameworks */,
-				26C1627DD3EDC2DFF6D0868F8E2F4DC8 /* Headers */,
-				F67C1AD7A0F3DBF3DCD6F051D7A87FEA /* Resources */,
+				A1CCB6347649893359095D445811DCDA /* Sources */,
+				189223AA28961D8000B13CBDBB75B7B9 /* Frameworks */,
+				DCA1577DCDC71C4EFCF9CA2419E089D2 /* Headers */,
+				00418149ADA5B76E8DA0046B9FBBF648 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -495,7 +542,45 @@
 			);
 			name = ScanditSDK;
 			productName = ScanditSDK;
-			productReference = AADF0255E41D3EC3FCC1E15CEDF33061 /* ScanditSDK.framework */;
+			productReference = F5BB654CCBDB40BC8BFF90F07534E09E /* ScanditSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B77839A15F72D79B96EE4F97386DB8E6 /* Pods-Pivoscan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20DABC81839E3442FCB2314892F2FA51 /* Build configuration list for PBXNativeTarget "Pods-Pivoscan" */;
+			buildPhases = (
+				C39BBAD26885DD54B64F88D3A5AE069D /* Sources */,
+				CFC096C22C9CC09F2C698B90E36BCDBA /* Frameworks */,
+				DCA0820BC6F37706028DE03176920B9E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3721921981FB4FDA9D2AFFDA70CB705D /* PBXTargetDependency */,
+				C4DBD027F18BBA3BCEE14BE0331EAF9C /* PBXTargetDependency */,
+				F1CB4B8055F9C979159EC14A22A48C1F /* PBXTargetDependency */,
+				E2A79F63297166B363453B26C1635B45 /* PBXTargetDependency */,
+			);
+			name = "Pods-Pivoscan";
+			productName = "Pods-Pivoscan";
+			productReference = 5884B0DECAE77B3F99114A72FD4EBD63 /* Pods_Pivoscan.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F20F352576C43AFD2B6E390A78E929BF /* BarCodeReaderView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CD31A347B966D2AE126D2C4B85015C0 /* Build configuration list for PBXNativeTarget "BarCodeReaderView" */;
+			buildPhases = (
+				256CB6D5388ACF957E3D316D5E8714DD /* Sources */,
+				9CDC24A6CF4DEC5F083DF80366FBE07E /* Frameworks */,
+				D74F82E680726ECCB9680A66BF5AFE8E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BarCodeReaderView;
+			productName = BarCodeReaderView;
+			productReference = BCB16A2A2ECE546426F24E6484B384F6 /* BarCodeReaderView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -515,51 +600,54 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 1F4F47CAA5B8142640E6089B8EDFEF48 /* Products */;
+			productRefGroup = 61DF8A1E3371694F305C08A89311C7CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */,
+				F20F352576C43AFD2B6E390A78E929BF /* BarCodeReaderView */,
 				4C698C648EE4D43C6B8BE0BE1FE91737 /* KeychainSwift */,
-				C2B76A476C727F8A51D44A2B3D8F65AE /* Pods-Pivoscan */,
-				D8C4B035082FE3EF6DA1CF035DFB9C73 /* ScanditSDK */,
+				B77839A15F72D79B96EE4F97386DB8E6 /* Pods-Pivoscan */,
+				B6B5EE9E8AE7438190A4C987B87BE41F /* ScanditSDK */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F67C1AD7A0F3DBF3DCD6F051D7A87FEA /* Resources */ = {
+		00418149ADA5B76E8DA0046B9FBBF648 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2CDDFC5350BBDE44F4A3EF554159968 /* beep.wav in Resources */,
-				4D37B99F9ADA80BF1BBD5C5010813102 /* camera-swap-icon-pressed.png in Resources */,
-				23407372442EBC433C6AEF5701AD6371 /* camera-swap-icon-pressed@2x.png in Resources */,
-				AD74CD06E439F8122D1AD7C0BFE26ADE /* camera-swap-icon.png in Resources */,
-				56D6D1614853A4CF86526DE794848B2E /* camera-swap-icon@2x.png in Resources */,
-				B72F03C1B1786D9967DC9C4109255640 /* de.lproj in Resources */,
-				76656441F85ECA6F689C0CC4DD7F6C9F /* en.lproj in Resources */,
-				FA925B284136B6CCAB40E0EBF864C916 /* flashlight-turn-off-icon-pressed.png in Resources */,
-				4C917B6CBD69D9BDA54A27FA3444A324 /* flashlight-turn-off-icon-pressed@2x.png in Resources */,
-				55EE289A6D3DC8BADD2047D1D0B64DB4 /* flashlight-turn-off-icon.png in Resources */,
-				CB1EF05D838844684878446CB95847EF /* flashlight-turn-off-icon@2x.png in Resources */,
-				A46E1EB11DE8762E841F44D62616CB34 /* flashlight-turn-on-icon-pressed.png in Resources */,
-				DA1E7E118615ED26C3B4CED5F6B503CC /* flashlight-turn-on-icon-pressed@2x.png in Resources */,
-				8B97335A526123E72E2BD792457F4D40 /* flashlight-turn-on-icon.png in Resources */,
-				C6C77399EB83C54468D2205724B9C24E /* flashlight-turn-on-icon@2x.png in Resources */,
-				FE1A7FD48B91ED7B7A9EA33C9F21469E /* poweredby.png in Resources */,
-				4611720F334F5B185970DEF8B6D75644 /* poweredby@2x.png in Resources */,
+				613F30B8514AC82F852BB3DF296AC384 /* beep.wav in Resources */,
+				DBE4EA46553612B6842D1A843B7134AE /* camera-swap-icon-pressed.png in Resources */,
+				273866980A62E48C0A938F90DAEE036F /* camera-swap-icon-pressed@2x.png in Resources */,
+				08358A88CDF013471664D2A71C144CFB /* camera-swap-icon.png in Resources */,
+				EDE5298389CFC4A2915CC5DF4EE0B3A6 /* camera-swap-icon@2x.png in Resources */,
+				733DCFD616C95F7DB0F6F872D2806EAB /* de.lproj in Resources */,
+				051AD1829B2189478F8A712EA4D0AF86 /* en.lproj in Resources */,
+				E110BD789FAEAB76078E735E8D50A9F7 /* flashlight-turn-off-icon-pressed.png in Resources */,
+				13C2B5FF74396E23E9BF9210F34B57AA /* flashlight-turn-off-icon-pressed@2x.png in Resources */,
+				9929549B123CAC0DFEFEA334A1FA6538 /* flashlight-turn-off-icon.png in Resources */,
+				FDFF3B49C034C029C7FA98244B8F6DA7 /* flashlight-turn-off-icon@2x.png in Resources */,
+				F64A9C2017B04E145BF0DD30549F9757 /* flashlight-turn-on-icon-pressed.png in Resources */,
+				2DC0736610714B3F4D54139CFF7C942C /* flashlight-turn-on-icon-pressed@2x.png in Resources */,
+				100973E13FB4ADB56413637C48462389 /* flashlight-turn-on-icon.png in Resources */,
+				ED406591B5A0A229EA22EE650EA89870 /* flashlight-turn-on-icon@2x.png in Resources */,
+				94B6AB8E07CA08D82EC6533B247F9D0C /* poweredby.png in Resources */,
+				3CF1BE18C0B8D293DE5DA61F8D2248F5 /* poweredby@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2D5462E0D83949897BC0DF4B6C21D77E /* Sources */ = {
+		256CB6D5388ACF957E3D316D5E8714DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B2507E8AD7C1775DE32FB0434C85ED /* Pods-Pivoscan-dummy.m in Sources */,
+				EE9B776429A3E41419BCDCD2F4124644 /* BarCodeReaderView-dummy.m in Sources */,
+				AA2907531AB1DFC6E12DD3E56D4ACF78 /* BarCodeReaderView.swift in Sources */,
+				42827B5BA5C307664A0870BCE10BAE67 /* NSError+BarCodeReaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,12 +676,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4A1104135CE7E8D3D260CB2938F1E9B /* Sources */ = {
+		A1CCB6347649893359095D445811DCDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA316BA928F1B10ABD184AFE7ECECED8 /* empty.cpp in Sources */,
-				46EE71A539720B9DB2A0088A26FD654B /* ScanditSDK-dummy.m in Sources */,
+				D30B91BE52F3D8533402B932329AA563 /* empty.cpp in Sources */,
+				DA66313EAC7307C566ED54959D1CB625 /* ScanditSDK-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C39BBAD26885DD54B64F88D3A5AE069D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				326CE67E9F2C045E03E928AA4B2FAE6B /* Pods-Pivoscan-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,30 +707,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		59DD0879EA0DEFD131A896C645C77F39 /* PBXTargetDependency */ = {
+		3721921981FB4FDA9D2AFFDA70CB705D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
-			targetProxy = 5F9491D83C64A3FF0CF05902A03DD279 /* PBXContainerItemProxy */;
+			targetProxy = FD94005970E7EED6B9150DA2C3F05FAA /* PBXContainerItemProxy */;
 		};
-		B1AC9F2557175E882CCAF89668180898 /* PBXTargetDependency */ = {
+		C4DBD027F18BBA3BCEE14BE0331EAF9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BarCodeReaderView;
+			target = F20F352576C43AFD2B6E390A78E929BF /* BarCodeReaderView */;
+			targetProxy = EE5212A23741B13BBCB3B449C2468E77 /* PBXContainerItemProxy */;
+		};
+		E2A79F63297166B363453B26C1635B45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ScanditSDK;
+			target = B6B5EE9E8AE7438190A4C987B87BE41F /* ScanditSDK */;
+			targetProxy = 2BB67C3B0970E823388D8252FB987B2D /* PBXContainerItemProxy */;
+		};
+		F1CB4B8055F9C979159EC14A22A48C1F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KeychainSwift;
 			target = 4C698C648EE4D43C6B8BE0BE1FE91737 /* KeychainSwift */;
-			targetProxy = BF34C49C22083A73C35AD0A63B97C7C0 /* PBXContainerItemProxy */;
-		};
-		F0EADC9600941EB0A32F3DE54036E8EB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ScanditSDK;
-			target = D8C4B035082FE3EF6DA1CF035DFB9C73 /* ScanditSDK */;
-			targetProxy = EB152BC4D7F195536C3D26084B93D7AF /* PBXContainerItemProxy */;
+			targetProxy = AB7A6FEA54A4B79E60149B37C7467344 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1859C00BD7D36E00B0B57BFB1AF718B4 /* Release */ = {
+		35D5EB4F5484A67A6AB874EFF07F172C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 129860ECDDA0002EBE1F74131DB99C16 /* ScanditSDK.xcconfig */;
+			baseConfigurationReference = B7D3C044E12874379258FDC570B3F4EA /* BarCodeReaderView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -643,14 +745,42 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ScanditSDK/ScanditSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ScanditSDK/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/BarCodeReaderView/BarCodeReaderView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BarCodeReaderView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ScanditSDK/ScanditSDK.modulemap";
+				MODULEMAP_FILE = "Target Support Files/BarCodeReaderView/BarCodeReaderView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BarCodeReaderView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		39DB0DA760F03870CD04D5456014E3C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7D3C044E12874379258FDC570B3F4EA /* BarCodeReaderView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BarCodeReaderView/BarCodeReaderView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BarCodeReaderView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BarCodeReaderView/BarCodeReaderView.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ScanditSDK;
+				PRODUCT_NAME = BarCodeReaderView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -661,7 +791,7 @@
 		};
 		4E75B9D1555CDD0C8CA65F22217D6159 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B6E08063F21AAAFA81AA8DF574B950B /* KeychainSwift.xcconfig */;
+			baseConfigurationReference = 18F7DCB32075FFC47A38017CB721FF85 /* KeychainSwift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -681,6 +811,33 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5C13298A05ED9FB8C58F98084456A605 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B04AFA5C0CD82FF9A1FC3BEE11D6FA6A /* ScanditSDK.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ScanditSDK/ScanditSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ScanditSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ScanditSDK/ScanditSDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ScanditSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -726,39 +883,9 @@
 			};
 			name = Debug;
 		};
-		714FEA8AA88B14A0F17A11BDCD085BB7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9237D039A030D85FE8ECF0EF164AF2E6 /* Pods-Pivoscan.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Pivoscan/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Pivoscan/Pods-Pivoscan.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_Pivoscan;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		73C4A8ED0F9FF478E5CB808C3D913F94 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B6E08063F21AAAFA81AA8DF574B950B /* KeychainSwift.xcconfig */;
+			baseConfigurationReference = 18F7DCB32075FFC47A38017CB721FF85 /* KeychainSwift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -817,36 +944,9 @@
 			};
 			name = Release;
 		};
-		76505891DAE03DB5CBE5D5E186ACE8B0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 129860ECDDA0002EBE1F74131DB99C16 /* ScanditSDK.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ScanditSDK/ScanditSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ScanditSDK/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ScanditSDK/ScanditSDK.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ScanditSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		8D7563421CB3D736181DD7A3A00A3AA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22D0A215F262B545414F8B64EFFE24A5 /* Alamofire.xcconfig */;
+			baseConfigurationReference = A7EEB9962DA93064B67D24482A7734FB /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -872,7 +972,91 @@
 			};
 			name = Debug;
 		};
-		D6DDF1C7E6670B0788BFAEA7C86B247C /* Debug */ = {
+		95D94D86733DD70D5D7CBB3A78609AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B04AFA5C0CD82FF9A1FC3BEE11D6FA6A /* ScanditSDK.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ScanditSDK/ScanditSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ScanditSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ScanditSDK/ScanditSDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ScanditSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C1719FF9CC0E38AD77F2A420772C4CF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9237D039A030D85FE8ECF0EF164AF2E6 /* Pods-Pivoscan.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Pivoscan/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Pivoscan/Pods-Pivoscan.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Pivoscan;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DDD135982FA3FBFAF77E8EC48CF38AD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7EEB9962DA93064B67D24482A7734FB /* Alamofire.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FAB39C6D1C3D57C4B4F7FAFB7E32D6A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7A7C9D19D5E4C57BE2F0BE784597C89C /* Pods-Pivoscan.debug.xcconfig */;
 			buildSettings = {
@@ -903,41 +1087,32 @@
 			};
 			name = Debug;
 		};
-		DDD135982FA3FBFAF77E8EC48CF38AD9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22D0A215F262B545414F8B64EFFE24A5 /* Alamofire.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		20DABC81839E3442FCB2314892F2FA51 /* Build configuration list for PBXNativeTarget "Pods-Pivoscan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB39C6D1C3D57C4B4F7FAFB7E32D6A6 /* Debug */,
+				C1719FF9CC0E38AD77F2A420772C4CF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
 				74857149DC1E0D599B8A01A78349A926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CD31A347B966D2AE126D2C4B85015C0 /* Build configuration list for PBXNativeTarget "BarCodeReaderView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35D5EB4F5484A67A6AB874EFF07F172C /* Debug */,
+				39DB0DA760F03870CD04D5456014E3C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -951,11 +1126,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5748725BF21EAAAA46E3B3EB97D74128 /* Build configuration list for PBXNativeTarget "Pods-Pivoscan" */ = {
+		96CCB681A5071C89F81EE8E6146247E0 /* Build configuration list for PBXNativeTarget "ScanditSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D6DDF1C7E6670B0788BFAEA7C86B247C /* Debug */,
-				714FEA8AA88B14A0F17A11BDCD085BB7 /* Release */,
+				5C13298A05ED9FB8C58F98084456A605 /* Debug */,
+				95D94D86733DD70D5D7CBB3A78609AEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -965,15 +1140,6 @@
 			buildConfigurations = (
 				4E75B9D1555CDD0C8CA65F22217D6159 /* Debug */,
 				73C4A8ED0F9FF478E5CB808C3D913F94 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C989F4EE5BB390D7661C7EF144EC8ECC /* Build configuration list for PBXNativeTarget "ScanditSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				76505891DAE03DB5CBE5D5E186ACE8B0 /* Debug */,
-				1859C00BD7D36E00B0B57BFB1AF718B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

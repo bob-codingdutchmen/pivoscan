@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '058A6D9351F43F87057BC341'
+               BlueprintIdentifier = 'EE3484B8B1B0476824D18ABB'
                BlueprintName = 'ScanditSDK'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'ScanditSDK.framework'>
