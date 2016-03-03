@@ -1,0 +1,1 @@
+../../../ScanditSDK/ScanditSDK/ScanditSDKBarcodePicker.h

@@ -1,0 +1,6 @@
+framework module ScanditSDK {
+  umbrella header "ScanditSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
