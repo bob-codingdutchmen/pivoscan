@@ -2,18 +2,15 @@ PODS:
   - Alamofire (3.2.0)
   - BarCodeReaderView (1.0.5)
   - KeychainSwift (3.0.11)
-  - ScanditSDK (4.1.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - BarCodeReaderView
   - KeychainSwift (~> 3.0)
-  - ScanditSDK
 
 SPEC CHECKSUMS:
   Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
   BarCodeReaderView: 7920feedbb1dca5ce353cfea5aebac809df88d18
   KeychainSwift: 0a4214c910423543a42b0f30f25987d46178b6a5
-  ScanditSDK: 5f908ba8d6018f72558aabb65b9eff367f60e93e
 
 COCOAPODS: 0.39.0

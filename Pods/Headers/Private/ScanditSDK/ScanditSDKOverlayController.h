@@ -1,1 +1,0 @@
-../../../ScanditSDK/ScanditSDK/ScanditSDKOverlayController.h

@@ -62,14 +62,43 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
     
     @IBAction func estimateButtonPressed(sender: UIButton) {
         
-//       Get estimate from button
-        if let estimate: Int = Int((sender.titleLabel?.text)!) {
-            if let story: Story = self.current_story {
-                if let pivo = self.pivo {
-                    pivo.set_story_estimate(story.id!, estimate: estimate)
+////       Get estimate from button
+//        if let estimate: Int = Int((sender.titleLabel?.text)!) {
+//            if let story: Story = self.current_story {
+//                if let pivo = self.pivo {
+//                    pivo.set_story_estimate(story.id!, estimate: estimate)
+//                }
+//            }
+//        }
+        
+        let actionSheetController: UIAlertController = UIAlertController(
+            title: "Change estimate",
+            message: nil,
+            preferredStyle: .ActionSheet
+        )
+        
+        //Create and add the Cancel action
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+            //Just dismiss the action sheet
+        }
+        actionSheetController.addAction(cancelAction)
+        
+        for num in [0, 1, 2, 3, 5, 8, 13, 20, 40, 100] {
+            //Create and add first option action
+            let title:String = String(format:"%d points", num)
+            let stateAction: UIAlertAction = UIAlertAction(title: title, style: .Default) { action -> Void in
+                if let story: Story = self.current_story {
+                    if let pivo = self.pivo {
+                        pivo.set_story_estimate(story.id!, estimate: num)
+                    }
                 }
             }
+            actionSheetController.addAction(stateAction)
         }
+        
+        //Present the AlertController
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+        
     }
     
     @IBAction func stateButtonPressed(sender: AnyObject) {
@@ -123,42 +152,6 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
         self.userLabel.text = name
         self.userId = userId
     }
-    
-    
-//    func barcodePicker(picker: SBSBarcodePicker, didScan session: SBSScanSession) {
-//        
-//        session.stopScanning();
-//        
-//        let code = session.newlyRecognizedCodes[0] as! SBSCode;
-//        
-//        dispatch_async(dispatch_get_main_queue()) {
-//            var continueScanning = true;
-//            
-//            if let scannedString:String = code.data! {
-//                if scannedString.hasPrefix("#") {
-//                    
-//                    if let story_id:Int = Int(String(scannedString.characters.dropFirst())) {
-//                        if let pivo = self.pivo {
-//                            pivo.get_story_with_id(story_id)
-//                            continueScanning = false
-//                        }
-//                    }
-//                } else if scannedString.characters.count == 32 {
-//                    if self.pivo == nil {
-//                        debugPrint("setting pivo key")
-//                        
-//                        self.keychain!.set(scannedString, forKey: "pivotalapikey")
-//                        self.initializeAPIWithKey(scannedString)
-//                    }
-//                }
-//            }
-//            
-//            if continueScanning {
-//                picker.startScanning()
-//            }
-//            
-//        };
-//    }
     
     func barcodeReader(barcodeReader: BarcodeReaderView, didFailReadingWithError error: NSError) {
         // handle error
@@ -224,7 +217,7 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
         }
         
         self.camView.delegate = self
-        self.camView.barCodeTypes = [.Code128]
+        self.camView.barCodeTypes = [.Code128, .QR]
         self.camView.startCapturing()
         self.camView.translatesAutoresizingMaskIntoConstraints = false
 
