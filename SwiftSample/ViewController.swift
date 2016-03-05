@@ -123,7 +123,7 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
         self.presentViewController(actionSheetController, animated: true, completion: nil)
     }
     
-    func scannedStory(story: Story){
+    func scannedStory(story: Story) {
         
         storyNameView.text = story.name
         self.current_story = story
@@ -145,14 +145,10 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
         self.userId = userId
     }
     
-    func barcodeReader(barcodeReader: BarcodeReaderView, didFailReadingWithError error: NSError) {
-        // handle error
-    }
+    func barcodeReader(barcodeReader: BarcodeReaderView, didFailReadingWithError error: NSError) {}
     
     func barcodeReader(barcodeReader: BarcodeReaderView, didFinishReadingString info: String) {
         //handle success reading
-        var continueScanning = true;
-//        self.enableScan(false)
         
         if let scannedString:String = info {
             if scannedString.hasPrefix("#") {
@@ -160,22 +156,11 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
                 if let story_id:Int = Int(String(scannedString.characters.dropFirst())) {
                     if let pivo = self.pivo {
                         pivo.get_story_with_id(story_id)
-                        continueScanning = false
                         self.enableScan(false)
                     }
                 }
-            } else if scannedString.characters.count == 32 {
-                if self.pivo == nil {
-                    
-                    self.keychain!.set(scannedString, forKey: "pivotalapikey")
-                    self.initializeAPIWithKey(scannedString)
-                }
             }
         }
-        
-//        if continueScanning {
-//            self.enableScan(true)
-//        }
     }
     
     
@@ -201,14 +186,6 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
         cardView.layer.shadowOffset = CGSizeZero
         cardView.layer.shadowRadius = 30
         
-        self.keychain = KeychainSwift()
-                
-        let pivokey = self.keychain!.get("pivotalapikey")
-        
-        if (pivokey != nil) {
-            initializeAPIWithKey(pivokey!)
-        }
-        
         self.camView.delegate = self
         self.camView.barCodeTypes = [.Code128, .QR]
         self.camView.startCapturing()
@@ -216,6 +193,21 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
         
         self.camView.translatesAutoresizingMaskIntoConstraints = false
 
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        // Check if we have a pivotal key:
+        
+        self.keychain = KeychainSwift()
+        
+        let pivokey = self.keychain!.get("pivotalapikey")
+        
+        if (pivokey != nil) {
+            initializeAPIWithKey(pivokey!)
+        } else {
+            self.performSegueWithIdentifier("setup", sender: self)
+        }
     }
     
     func enableScan(enable: Bool) {
