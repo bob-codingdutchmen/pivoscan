@@ -180,7 +180,7 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         cardView.layer.shadowColor = UIColor.blackColor().CGColor
         cardView.layer.shadowOpacity = 0.4
         cardView.layer.shadowOffset = CGSizeZero
@@ -197,11 +197,7 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
     
     override func viewDidAppear(animated: Bool) {
         
-        // Check if we have a pivotal key:
-        
-        self.keychain = KeychainSwift()
-        
-        let pivokey = self.keychain!.get("pivotalapikey")
+        let pivokey = KeychainSwift().get("pivotalapikey")
         
         if (pivokey != nil) {
             initializeAPIWithKey(pivokey!)
