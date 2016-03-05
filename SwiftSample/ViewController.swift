@@ -19,7 +19,7 @@ import BarCodeReaderView
 
 let kScanditBarcodeScannerAppKey = "GIEGzinOn+WlzV4rVcY/bPQbV92kGmLCMEbqDK1p/2o";
 
-class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate, UIAlertViewDelegate {
+class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate {
 
     @IBOutlet weak var camView: BarcodeReaderView!
     
@@ -192,10 +192,6 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
             let urlString: NSString = NSString(format: "pivotaltracker://s/%d", story.id!)
             UIApplication.sharedApplication().openURL(NSURL(string: urlString as String)!)
         }
-    }
-    
-    func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
-        self.camView.startCapturing()
     }
     
     func initializeAPIWithKey(key: String) {

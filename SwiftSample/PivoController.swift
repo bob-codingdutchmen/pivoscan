@@ -35,10 +35,10 @@ class Story {
     }
     
     init(dict: AnyObject) {
-        self.id = dict["id"] as! Int
-        self.name = dict["name"] as! String
-        self.state = dict["current_state"] as! String
-        self.url = dict["url"] as! String
+        self.id = dict["id"] as? Int
+        self.name = dict["name"] as? String
+        self.state = dict["current_state"] as? String
+        self.url = dict["url"] as? String
         
         let kind: String = dict["story_type"] as! String
         switch kind {
