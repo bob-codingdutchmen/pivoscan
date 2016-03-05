@@ -180,7 +180,7 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         cardView.layer.shadowColor = UIColor.blackColor().CGColor
         cardView.layer.shadowOpacity = 0.4
         cardView.layer.shadowOffset = CGSizeZero

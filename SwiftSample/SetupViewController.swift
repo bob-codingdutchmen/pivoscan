@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KeychainSwift
 
 class SetupViewController: UIViewController, PivoDelegate, UITextFieldDelegate {
 
@@ -61,7 +62,7 @@ class SetupViewController: UIViewController, PivoDelegate, UITextFieldDelegate {
             self.resultLabel.alpha = 1.0
             self.resultLabel.text = "Verifying…"
             self.resultImageView.alpha = 0.0;
-            
+            KeychainSwift().set(trimmedToken, forKey: "pivotalapikey")
             self.pivo = PivoController(token: trimmedToken)
             self.pivo!.delegate = self
             self.pivo!.get_current_user()
