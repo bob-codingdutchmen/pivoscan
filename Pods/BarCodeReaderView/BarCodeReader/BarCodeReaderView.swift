@@ -252,7 +252,7 @@ private extension BarcodeReaderView {
         layer.frame = rootLayer.bounds
         layer.videoGravity = AVLayerVideoGravityResizeAspectFill
         rootLayer.addSublayer(layer)
-        layer.cornerRadius = 5.0;
+        layer.cornerRadius = 0.0;
         previewLayer = layer
     }
     

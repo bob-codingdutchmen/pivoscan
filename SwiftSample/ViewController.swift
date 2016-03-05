@@ -25,7 +25,9 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
     
     @IBOutlet weak var storyNameView: UILabel!
     @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var cardView: UIView!
     
+    @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet var estimateButtons: [UIButton]!
     
     @IBOutlet weak var idLabel: UILabel!
@@ -56,20 +58,10 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
     }
     
     @IBAction func overlayPressed(sender: AnyObject) {
-        self.camView.startCapturing()
-        overlayButton.hidden = true
+        self.enableScan(true)
     }
     
     @IBAction func estimateButtonPressed(sender: UIButton) {
-        
-////       Get estimate from button
-//        if let estimate: Int = Int((sender.titleLabel?.text)!) {
-//            if let story: Story = self.current_story {
-//                if let pivo = self.pivo {
-//                    pivo.set_story_estimate(story.id!, estimate: estimate)
-//                }
-//            }
-//        }
         
         let actionSheetController: UIAlertController = UIAlertController(
             title: "Change estimate",
@@ -81,6 +73,7 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
         let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
             //Just dismiss the action sheet
         }
+        
         actionSheetController.addAction(cancelAction)
         
         for num in [0, 1, 2, 3, 5, 8, 13, 20, 40, 100] {
@@ -143,7 +136,6 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
             self.pointsLabel.text = String(format:"%d", story.estimate)
         }
         
-        overlayButton.hidden = false
         
         self.labelsLabel.text = story.labels.joinWithSeparator("\n")
     }
@@ -160,7 +152,7 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
     func barcodeReader(barcodeReader: BarcodeReaderView, didFinishReadingString info: String) {
         //handle success reading
         var continueScanning = true;
-        self.camView.stopCapturing()
+//        self.enableScan(false)
         
         if let scannedString:String = info {
             if scannedString.hasPrefix("#") {
@@ -169,11 +161,11 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
                     if let pivo = self.pivo {
                         pivo.get_story_with_id(story_id)
                         continueScanning = false
+                        self.enableScan(false)
                     }
                 }
             } else if scannedString.characters.count == 32 {
                 if self.pivo == nil {
-                    debugPrint("setting pivo key")
                     
                     self.keychain!.set(scannedString, forKey: "pivotalapikey")
                     self.initializeAPIWithKey(scannedString)
@@ -181,9 +173,9 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
             }
         }
         
-        if continueScanning {
-            self.camView.startCapturing()
-        }
+//        if continueScanning {
+//            self.enableScan(true)
+//        }
     }
     
     
@@ -204,6 +196,11 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        cardView.layer.shadowColor = UIColor.blackColor().CGColor
+        cardView.layer.shadowOpacity = 0.4
+        cardView.layer.shadowOffset = CGSizeZero
+        cardView.layer.shadowRadius = 30
+        
         self.keychain = KeychainSwift()
                 
         let pivokey = self.keychain!.get("pivotalapikey")
@@ -215,10 +212,31 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
         self.camView.delegate = self
         self.camView.barCodeTypes = [.Code128, .QR]
         self.camView.startCapturing()
+        self.enableScan(true)
+        
         self.camView.translatesAutoresizingMaskIntoConstraints = false
 
-        self.overlayButton.hidden = true
     }
-
+    
+    func enableScan(enable: Bool) {
+        let anim_duration = 0.4
+        
+        if enable {
+            
+            UIView.animateWithDuration(anim_duration, animations: { () -> Void in
+                self.overlayButton.alpha = 0.0
+                self.blurView.effect = nil
+            })
+            self.camView.startCapturing()
+            
+        } else {
+            
+            UIView.animateWithDuration(anim_duration, animations: { () -> Void in
+                self.overlayButton.alpha = 1.0
+                self.blurView.effect = UIBlurEffect(style: .Dark)
+            })
+            self.camView.stopCapturing()
+        }
+    }
 }
 
