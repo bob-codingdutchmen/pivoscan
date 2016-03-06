@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import KeychainSwift
 
 
 protocol PivoDelegate {
@@ -25,6 +26,7 @@ class Story {
     var name: String?
     var state: String?
     var url: String?
+    var project_id: Int?
     var story_type: StoryType = .Story
     var labels = [String]()
     
@@ -39,6 +41,7 @@ class Story {
         self.name = dict["name"] as? String
         self.state = dict["current_state"] as? String
         self.url = dict["url"] as? String
+        self.project_id = dict["project_id"] as? Int
         
         let kind: String = dict["story_type"] as! String
         switch kind {
@@ -70,12 +73,70 @@ class Story {
     }
 }
 
+
+class Project {
+    var id: Int
+    var point_scale: String
+    var name: String
+    
+    init(id: Int, name: String, point_scale: String) {
+        self.id = id
+        self.name = name
+        self.point_scale = point_scale
+    }
+}
+
 class PivoController {
     var token: String?
     var delegate: PivoDelegate?
+    var projects: [Int: Project]?
     
     init(token: String) {
         self.token = token
+        self.projects = [Int: Project]()
+    }
+
+    
+    func setup() {
+        let headers = [
+            "X-TrackerToken": token!
+        ]
+        let url = String("https://www.pivotaltracker.com/services/v5/me")
+        Alamofire.request(.GET, url, headers: headers)
+            .responseJSON { response in
+                
+                if let JSON = response.result.value {
+                    let userId = JSON["id"] as! Int
+                    let name = JSON["name"] as! String
+                    let keychain = KeychainSwift()
+                    
+                    keychain.set(String(format: "%d", userId), forKey: "userid")
+                    keychain.set(name, forKey: "username")
+                    
+                    self.delegate?.gotUser(userId, name: name)
+                    
+                    for projectDict in JSON["projects"] as! NSArray {
+                        let proj_name = projectDict["project_name"] as! String
+                        let proj_id = projectDict["project_id"] as! Int
+                        
+                        let url = String(format:"https://www.pivotaltracker.com/services/v5/projects/%d", proj_id)
+                        Alamofire.request(.GET, url, headers: headers)
+                            .responseJSON { response in
+                                if let PROJ = response.result.value {
+                                    self.projects![proj_id] = Project(
+                                        id: proj_id,
+                                        name: proj_name,
+                                        point_scale: PROJ["point_scale"] as! String
+                                    )
+                                }
+                        }
+                    }
+                }
+        }
+    }
+    
+    func project_with_id(project_id: Int) -> Project {
+        return self.projects![project_id]!
     }
     
     func get_story_with_id(id: Int) {
@@ -91,7 +152,7 @@ class PivoController {
                     let story = Story(dict:JSON)
                     self.delegate?.scannedStory(story)
                 }
-            }
+        }
     }
     
     func get_current_user() {

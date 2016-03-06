@@ -40,7 +40,6 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
     var current_story : Story?
     var userId : Int?
     var pivo : PivoController?
-    var keychain : KeychainSwift?
 
     
     let states = [
@@ -76,13 +75,15 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
         
         actionSheetController.addAction(cancelAction)
         
-        for num in [0, 1, 2, 3, 5, 8, 13, 20, 40, 100] {
+        let point_scale = self.pivo!.project_with_id(self.current_story!.project_id!).point_scale
+        
+        for num in point_scale.componentsSeparatedByString(",") {
             //Create and add first option action
-            let title:String = String(format:"%d points", num)
+            let title:String = String(format:"%@ points", num)
             let stateAction: UIAlertAction = UIAlertAction(title: title, style: .Default) { action -> Void in
                 if let story: Story = self.current_story {
                     if let pivo = self.pivo {
-                        pivo.set_story_estimate(story.id!, estimate: num)
+                        pivo.set_story_estimate(story.id!, estimate: Int(num)!)
                     }
                 }
             }
@@ -136,12 +137,12 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
             self.pointsLabel.text = String(format:"%d", story.estimate)
         }
         
-        
+        self.userLabel.text = self.pivo!.project_with_id(story.project_id!).name
         self.labelsLabel.text = story.labels.joinWithSeparator("\n")
     }
     
     func gotUser(userId: Int, name: String) {
-        self.userLabel.text = name
+//        self.userLabel.text = name
         self.userId = userId
     }
     
@@ -175,7 +176,8 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
         
         self.pivo = PivoController(token: key)
         self.pivo!.delegate = self
-        self.pivo!.get_current_user()
+        self.pivo!.setup()
+//        self.pivo!.get_current_user()
     }
     
     override func viewDidLoad() {
