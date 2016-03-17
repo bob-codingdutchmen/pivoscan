@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10109" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EstimationViewController" customModule="Pivoscan" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="F1q-GH-u93" id="UGk-Ce-Mq3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYQ-Hp-mxS">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bQN-bz-fUt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3A-kh-edx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="IGg-pS-n5g">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="i3A-kh-edx" secondAttribute="trailing" id="Gkw-MR-RYq"/>
+                            <constraint firstItem="i3A-kh-edx" firstAttribute="leading" secondItem="bQN-bz-fUt" secondAttribute="leading" id="JmN-PY-Fx3"/>
+                            <constraint firstAttribute="bottom" secondItem="i3A-kh-edx" secondAttribute="bottom" id="QJV-Vp-Mhk"/>
+                            <constraint firstItem="i3A-kh-edx" firstAttribute="top" secondItem="bQN-bz-fUt" secondAttribute="top" id="ioa-1Q-bVA"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="F1q-GH-u93">
+                    <rect key="frame" x="0.0" y="38" width="600" height="562"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uGf-2b-Sgc">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="3je-1E-DpF"/>
+                        <outlet property="delegate" destination="-1" id="xlS-vz-qxq"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drS-zJ-I7J">
+                    <rect key="frame" x="544" y="4" width="48" height="30"/>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="cancelButtonPressed:" destination="-1" eventType="touchUpInside" id="OaU-My-d9H"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="F1q-GH-u93" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4Zb-5h-kK9"/>
+                <constraint firstItem="F1q-GH-u93" firstAttribute="top" secondItem="drS-zJ-I7J" secondAttribute="bottom" constant="4" id="82m-xW-msM"/>
+                <constraint firstItem="OYQ-Hp-mxS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TYE-Wx-T3X"/>
+                <constraint firstAttribute="trailing" secondItem="F1q-GH-u93" secondAttribute="trailing" id="cX7-GE-3Vv"/>
+                <constraint firstItem="OYQ-Hp-mxS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lmG-yI-dva"/>
+                <constraint firstItem="drS-zJ-I7J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="4" id="ovB-Y7-PLb"/>
+                <constraint firstAttribute="trailing" secondItem="OYQ-Hp-mxS" secondAttribute="trailing" id="qbK-Jz-LCm"/>
+                <constraint firstAttribute="bottom" secondItem="OYQ-Hp-mxS" secondAttribute="bottom" id="toY-55-9cN"/>
+                <constraint firstAttribute="trailing" secondItem="drS-zJ-I7J" secondAttribute="trailing" constant="8" id="vkh-2X-C3P"/>
+                <constraint firstAttribute="bottom" secondItem="F1q-GH-u93" secondAttribute="bottom" id="vzG-NJ-FWu"/>
+            </constraints>
+            <point key="canvasLocation" x="367" y="467"/>
+        </view>
+    </objects>
+</document>

@@ -19,7 +19,7 @@ import BarCodeReaderView
 
 let kScanditBarcodeScannerAppKey = "GIEGzinOn+WlzV4rVcY/bPQbV92kGmLCMEbqDK1p/2o";
 
-class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate {
+class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate, EstimationDelegate {
 
     @IBOutlet weak var camView: BarcodeReaderView!
     
@@ -30,16 +30,26 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet var estimateButtons: [UIButton]!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var idLabel: UILabel!
 
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var labelsLabel: UILabel!
     @IBOutlet weak var overlayButton: UIButton!
+
+    @IBOutlet var storyView: UIView!
     
+    
+    @IBOutlet weak var estimateCollectionView: UICollectionView!
+    
+    
+    @IBOutlet weak var estimateConstraint: NSLayoutConstraint!
     var current_story : Story?
     var userId : Int?
     var pivo : PivoController?
+    
+    var estimateViewController: EstimationViewController?
 
     
     let states = [
@@ -60,39 +70,72 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
         self.enableScan(true)
     }
     
+    func constraintsToMatchViews(view: UIView, matchToView: UIView) -> [NSLayoutConstraint] {
+        return [
+            NSLayoutConstraint(
+                item: view,
+                attribute: .Left,
+                relatedBy: .Equal,
+                toItem: matchToView,
+                attribute: .Left,
+                multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(
+                item: view,
+                attribute: .Right,
+                relatedBy: .Equal,
+                toItem: matchToView,
+                attribute: .Right,
+                multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(
+                item: view,
+                attribute: .Top,
+                relatedBy: .Equal,
+                toItem: matchToView,
+                attribute: .Top,
+                multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(
+                item: view,
+                attribute: .Bottom,
+                relatedBy: .Equal,
+                toItem: matchToView,
+                attribute: .Bottom,
+                multiplier: 1.0, constant: 0.0),
+            ]
+    }
+    
     @IBAction func estimateButtonPressed(sender: UIButton) {
         
-        let actionSheetController: UIAlertController = UIAlertController(
-            title: "Change estimate",
-            message: nil,
-            preferredStyle: .ActionSheet
-        )
         
-        //Create and add the Cancel action
-        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
-            //Just dismiss the action sheet
-        }
+//        - Add estimation view to current view
+//        - Animate to final position
         
-        actionSheetController.addAction(cancelAction)
+        self.view.addSubview(self.estimateViewController!.view)
+        self.estimateViewController!.view.translatesAutoresizingMaskIntoConstraints = false;
+        
+//      Tell estimate controller what points to show:
         
         let point_scale = self.pivo!.project_with_id(self.current_story!.project_id!).point_scale
+        self.estimateViewController!.pointScale = point_scale.componentsSeparatedByString(",")
         
-        for num in point_scale.componentsSeparatedByString(",") {
-            //Create and add first option action
-            let title:String = String(format:"%@ points", num)
-            let stateAction: UIAlertAction = UIAlertAction(title: title, style: .Default) { action -> Void in
-                if let story: Story = self.current_story {
-                    if let pivo = self.pivo {
-                        pivo.set_story_estimate(story.id!, estimate: Int(num)!)
-                    }
-                }
-            }
-            actionSheetController.addAction(stateAction)
-        }
+        self.estimateViewController!.view.alpha = 0.0
         
-        //Present the AlertController
-        self.presentViewController(actionSheetController, animated: true, completion: nil)
+        let step1Constraints = self.constraintsToMatchViews(self.estimateViewController!.view, matchToView: self.pointsLabel)
+        self.view.addConstraints(step1Constraints)
+        self.view.layoutIfNeeded()
         
+        UIView.animateWithDuration(
+            0.3,
+            delay: 0,
+            usingSpringWithDamping: 0.96,
+            initialSpringVelocity: 1.0,
+            options: UIViewAnimationOptions.CurveEaseInOut,
+            animations: { () -> Void in
+                self.view.removeConstraints(step1Constraints)
+                self.estimateViewController!.view.alpha = 1.0
+                self.view.addConstraints(self.constraintsToMatchViews(self.estimateViewController!.view, matchToView: self.storyView))
+                self.view.layoutIfNeeded()
+            },
+            completion: nil)
     }
     
     @IBAction func stateButtonPressed(sender: AnyObject) {
@@ -113,6 +156,7 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
             let stateAction: UIAlertAction = UIAlertAction(title: state.1, style: .Default) { action -> Void in
                 if let story: Story = self.current_story {
                     if let pivo = self.pivo {
+                        self.spinner.startAnimating()
                         pivo.set_story_state(story.id!, state: state.0, user: self.userId)
                     }
                 }
@@ -125,7 +169,7 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
     }
     
     func scannedStory(story: Story) {
-        
+        self.spinner.stopAnimating()
         storyNameView.text = story.name
         self.current_story = story
         
@@ -156,6 +200,7 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
                 
                 if let story_id:Int = Int(String(scannedString.characters.dropFirst())) {
                     if let pivo = self.pivo {
+                        self.spinner.startAnimating()
                         pivo.get_story_with_id(story_id)
                         self.enableScan(false)
                     }
@@ -177,7 +222,6 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
         self.pivo = PivoController(token: key)
         self.pivo!.delegate = self
         self.pivo!.setup()
-//        self.pivo!.get_current_user()
     }
     
     override func viewDidLoad() {
@@ -194,6 +238,9 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
         self.enableScan(true)
         
         self.camView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.estimateViewController = EstimationViewController(nibName: "EstimationViewController", bundle: nil)
+        self.estimateViewController?.delegate = self
 
     }
     
@@ -227,6 +274,63 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate 
             })
             self.camView.stopCapturing()
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "estimate" {
+            segue.destinationViewController.view.backgroundColor = UIColor.clearColor()
+            segue.sourceViewController.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
+        }
+        
+    }
+    
+    // MARK: EstimationDelegate
+    
+    func estimationViewControllerDidCancel() {
+        self.hideEstimateViewController()
+    }
+    
+    func estimationViewControllerDidSelectEstimate(estimate: Int) {
+        if let story: Story = self.current_story {
+            if let pivo = self.pivo {
+                self.spinner.startAnimating()
+                pivo.set_story_estimate(story.id!, estimate: estimate)
+                self.hideEstimateViewController()
+            }
+        }
+    }
+    
+    func hideEstimateViewController() {
+        self.estimateViewController!.view.alpha = 0.0
+        
+        var removeConstraints = [NSLayoutConstraint]()
+        for constraint: NSLayoutConstraint in self.view.constraints {
+            if constraint.firstItem as! UIView == self.estimateViewController!.view {
+                removeConstraints += [constraint]
+            }
+        }
+        
+        
+        self.view.removeConstraints(removeConstraints)
+        self.view.layoutIfNeeded()
+        
+        self.view.addConstraints(self.constraintsToMatchViews(self.estimateViewController!.view, matchToView: self.pointsLabel))
+        
+        
+        UIView.animateWithDuration(
+            0.3,
+            delay: 0,
+            usingSpringWithDamping: 0.96,
+            initialSpringVelocity: 1.0,
+            options: UIViewAnimationOptions.CurveEaseInOut,
+            animations: { () -> Void in
+                self.estimateViewController!.view.alpha = 0.0
+                self.view.layoutIfNeeded()
+            },
+            completion: { (Bool) -> Void in
+                (self.estimateViewController?.view.removeFromSuperview())!
+            })
     }
 }
 
