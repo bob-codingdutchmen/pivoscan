@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'EABE9952C6957FF4C5B5EFB8'
+               BlueprintIdentifier = 'A4FBFE25ED523824D2AC822B'
                BlueprintName = 'Pods-Pivoscan'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Pivoscan.framework'>
