@@ -314,6 +314,7 @@
 					AAE4C7591B4681650031DF4F = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 9Z539P2F7G;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -587,6 +588,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -607,6 +609,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
