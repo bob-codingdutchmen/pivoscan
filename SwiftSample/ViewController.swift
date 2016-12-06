@@ -50,7 +50,8 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
     var pivo : PivoController?
     
     var estimateViewController: EstimationViewController?
-
+    
+    var scannedStories = [String]()
     
     let states = [
         ("unscheduled", "Unscheduled"),
@@ -197,12 +198,15 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
         
         if let scannedString:String = info {
             if scannedString.hasPrefix("#") {
-                
+                if self.scannedStories.contains(scannedString) {
+                    return
+                }
                 if let story_id:Int = Int(String(scannedString.characters.dropFirst())) {
                     if let pivo = self.pivo {
+                        self.scannedStories.append(scannedString)
                         self.spinner.startAnimating()
                         pivo.get_story_with_id(story_id)
-                        self.enableScan(false)
+                        //self.enableScan(false)
                     }
                 }
             }

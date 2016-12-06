@@ -1,27 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Roboto-BoldCondensed.ttf">
+        <array key="Roboto-BoldCondensed.ttf">
             <string>Roboto-BoldCondensed</string>
-        </mutableArray>
-        <mutableArray key="Roboto-Condensed.ttf">
+        </array>
+        <array key="Roboto-Condensed.ttf">
             <string>Roboto-Condensed</string>
-            <string>Roboto-Condensed</string>
-        </mutableArray>
-        <mutableArray key="Roboto-Medium.ttf">
+        </array>
+        <array key="Roboto-Medium.ttf">
             <string>Roboto-Medium</string>
-        </mutableArray>
-        <mutableArray key="RobotoSlab-Bold.ttf">
+        </array>
+        <array key="RobotoSlab-Bold.ttf">
             <string>RobotoSlab-Bold</string>
-        </mutableArray>
-        <mutableArray key="RobotoSlab-Regular.ttf">
+        </array>
+        <array key="RobotoSlab-Regular.ttf">
             <string>RobotoSlab-Regular</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -33,27 +36,27 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_purple.png" translatesAutoresizingMaskIntoConstraints="NO" id="dUL-2K-cWG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg_purple.png" translatesAutoresizingMaskIntoConstraints="NO" id="dUL-2K-cWG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4q-5L-G7g" userLabel="CardView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m4q-5L-G7g" userLabel="CardView">
                                 <rect key="frame" x="20" y="30" width="374" height="634"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mp4-0s-ham" customClass="BarcodeReaderView" customModule="BarCodeReaderView">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mp4-0s-ham" customClass="BarcodeReaderView" customModule="BarCodeReaderView">
                                 <rect key="frame" x="20" y="30" width="374" height="242"/>
-                                <color key="backgroundColor" red="0.60350225788531087" green="0.81382074225310386" blue="0.89502208769633507" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.60350225788531087" green="0.81382074225310386" blue="0.89502208769633507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7t-8Q-bnz">
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7t-8Q-bnz">
                                 <rect key="frame" x="20" y="30" width="374" height="242"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mDG-jr-cT6">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="242"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSe-Z5-2q9">
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSe-Z5-2q9">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="242"/>
                                             <state key="normal" image="ic_scan.png"/>
                                             <connections>
@@ -61,7 +64,7 @@
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="eSe-Z5-2q9" secondAttribute="trailing" id="OGW-9Q-wBY"/>
                                         <constraint firstItem="eSe-Z5-2q9" firstAttribute="leading" secondItem="mDG-jr-cT6" secondAttribute="leading" id="exb-xQ-Bvt"/>
@@ -69,52 +72,52 @@
                                         <constraint firstAttribute="bottom" secondItem="eSe-Z5-2q9" secondAttribute="bottom" id="r6s-w1-QGC"/>
                                     </constraints>
                                 </view>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xni-4i-vro" userLabel="Story View">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xni-4i-vro" userLabel="Story View">
                                 <rect key="frame" x="20" y="272" width="374" height="392"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="headTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="nbL-cv-Ih8">
                                         <rect key="frame" x="20" y="332" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Roboto-Condensed" family="Roboto" pointSize="12"/>
-                                        <color key="textColor" red="0.15686274509803921" green="0.17254901960784313" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.15686274509803921" green="0.17254901960784313" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUo-U5-Gat">
                                         <rect key="frame" x="322" y="376" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
-                                        <color key="textColor" red="0.72941176470588232" green="0.74117647058823533" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.72941176470588232" green="0.74117647058823533" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyv-kK-qJg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyv-kK-qJg">
                                         <rect key="frame" x="20" y="368" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Roboto-Condensed" family="Roboto" pointSize="16"/>
-                                        <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="797-1W-PXS">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="797-1W-PXS">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unstarted" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyM-py-uwC">
                                                 <rect key="frame" x="20" y="14" width="70" height="22"/>
                                                 <fontDescription key="fontDescription" name="Roboto-BoldCondensed" family="Roboto" pointSize="18"/>
-                                                <color key="textColor" red="0.20000000000000001" green="0.23529411764705882" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.23529411764705882" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="-" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaj-p6-NJp">
                                                 <rect key="frame" x="314" y="9" width="8" height="27"/>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
-                                                <color key="textColor" red="0.35686274509803922" green="0.45098039215686275" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.35686274509803922" green="0.45098039215686275" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clK-Vz-nX3">
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clK-Vz-nX3">
                                                 <rect key="frame" x="0.0" y="0.0" width="302" height="50"/>
                                                 <connections>
                                                     <action selector="stateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zb7-iQ-VQf"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHV-Iy-AOU">
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHV-Iy-AOU">
                                                 <rect key="frame" x="310" y="0.0" width="64" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="64" id="qCA-AS-Did"/>
@@ -124,7 +127,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="CHV-Iy-AOU" secondAttribute="bottom" id="0sh-6z-K0z"/>
                                             <constraint firstItem="CHV-Iy-AOU" firstAttribute="top" secondItem="797-1W-PXS" secondAttribute="top" id="3po-Yk-jPH"/>
@@ -140,18 +143,18 @@
                                             <constraint firstItem="clK-Vz-nX3" firstAttribute="top" secondItem="797-1W-PXS" secondAttribute="top" id="sdp-Yx-Th5"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18f-Jx-dxg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18f-Jx-dxg">
                                         <rect key="frame" x="20" y="66" width="334" height="22"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="16"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="LXU-Ae-JxM">
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="LXU-Ae-JxM">
                                         <rect key="frame" x="169" y="178" width="37" height="37"/>
-                                        <color key="color" red="0.20000000000000001" green="0.24705882352941178" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="color" red="0.20000000000000001" green="0.24705882352941178" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </activityIndicatorView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Yyv-kK-qJg" firstAttribute="leading" secondItem="Xni-4i-vro" secondAttribute="leading" constant="20" id="5RQ-lL-oE4"/>
                                     <constraint firstItem="797-1W-PXS" firstAttribute="leading" secondItem="Xni-4i-vro" secondAttribute="leading" id="BX7-m0-qHD"/>
@@ -185,7 +188,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJU-Pg-4r1">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJU-Pg-4r1">
                                 <rect key="frame" x="191" y="684" width="32" height="32"/>
                                 <state key="normal" image="ic_browser.png"/>
                                 <connections>
@@ -193,7 +196,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <accessibility key="accessibilityConfiguration" label="MainView"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="mp4-0s-ham" secondAttribute="trailing" id="0UW-uX-kYq"/>
@@ -226,7 +229,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="blurView" destination="Q7t-8Q-bnz" id="03t-5Z-v5a"/>
                         <outlet property="camView" destination="mp4-0s-ham" id="B3k-Z7-bPB"/>
@@ -245,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="365" y="329"/>
+            <point key="canvasLocation" x="100" y="328"/>
         </scene>
         <!--Setup View Controller-->
         <scene sceneID="7jS-i1-Hp3">
@@ -272,7 +274,7 @@
 To allow this, copy the access token from the Pivotal settings page, and paste it in the box below. 
 It's a 32 character string that should be at the bottom of the page. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bm-Bc-E2A">
@@ -284,7 +286,7 @@ It's a 32 character string that should be at the bottom of the page. </string>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qld-YP-n6c">
                                         <rect key="frame" x="20" y="249" width="303" height="30"/>
-                                        <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                         <connections>
@@ -295,7 +297,7 @@ It's a 32 character string that should be at the bottom of the page. </string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paste access token here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nt-QW-LIq">
                                         <rect key="frame" x="20" y="224" width="162" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_check_green.png" translatesAutoresizingMaskIntoConstraints="NO" id="3KR-aJ-cq7">
@@ -308,25 +310,25 @@ It's a 32 character string that should be at the bottom of the page. </string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verifying…" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkz-n6-BNM">
                                         <rect key="frame" x="20" y="371" width="303" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="p51-7R-tJQ">
                                         <rect key="frame" x="153" y="312" width="37" height="37"/>
-                                        <color key="color" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <color key="color" red="0.25" green="0.25" blue="0.25" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZH-8x-wP4">
                                         <rect key="frame" x="179" y="513" width="144" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="Start using Pivoscan">
-                                            <color key="titleColor" red="0.87058823529411766" green="0.36470588235294116" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.87058823529411766" green="0.36470588235294116" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="startPivoButtonPressed:" destination="38k-hd-rUf" eventType="touchUpInside" id="y4I-10-kkC"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="qld-YP-n6c" secondAttribute="trailing" constant="20" id="0Qf-up-TdA"/>
                                     <constraint firstItem="7Bm-Bc-E2A" firstAttribute="leading" secondItem="DYv-XH-hRb" secondAttribute="leading" constant="20" id="1pp-wE-ngs"/>
@@ -353,13 +355,13 @@ It's a 32 character string that should be at the bottom of the page. </string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pivoscan setup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tZ-qf-fJJ">
                                 <rect key="frame" x="16" y="28" width="343" height="40"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
-                                <color key="textColor" red="0.90588235294117647" green="0.45098039215686275" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.90588235294117647" green="0.45098039215686275" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="0.096039870689655166" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.096039870689655166" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DYv-XH-hRb" firstAttribute="top" secondItem="1tZ-qf-fJJ" secondAttribute="bottom" constant="20" id="0rv-u1-PEv"/>
                             <constraint firstItem="tyH-Y7-i5z" firstAttribute="top" secondItem="jwO-Fa-rVp" secondAttribute="bottom" id="4UZ-d0-jiT"/>
@@ -374,7 +376,6 @@ It's a 32 character string that should be at the bottom of the page. </string>
                             <constraint firstItem="jwO-Fa-rVp" firstAttribute="leading" secondItem="zWI-Dc-Uhd" secondAttribute="leadingMargin" constant="-20" id="ylu-Ye-kQF"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="resultImageView" destination="3KR-aJ-cq7" id="GcL-Fc-R0y"/>
                         <outlet property="resultLabel" destination="kkz-n6-BNM" id="6eC-ey-R87"/>
