@@ -14,14 +14,12 @@
 
 import UIKit
 import KeychainSwift
-import BarCodeReaderView
+import MTBBarcodeScanner
 
 
-
-class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate, EstimationDelegate {
-
-    @IBOutlet weak var camView: BarcodeReaderView!
+class ViewController: UIViewController, PivoDelegate, EstimationDelegate {
     
+    @IBOutlet weak var camView:UIView!
     @IBOutlet weak var storyNameView: UILabel!
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var cardView: UIView!
@@ -40,6 +38,9 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
     @IBOutlet var storyView: UIView!
     
     
+    var scanner: MTBBarcodeScanner?
+    
+    
     @IBOutlet weak var estimateCollectionView: UICollectionView!
     
     
@@ -47,6 +48,8 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
     var current_story : Story?
     var userId : Int?
     var pivo : PivoController?
+    
+    var scanningEnabled = false
     
     var estimateViewController: EstimationViewController?
 
@@ -61,48 +64,48 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
         ("rejected", "Rejected"),
     ]
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
-    @IBAction func overlayPressed(sender: AnyObject) {
+    @IBAction func overlayPressed(_ sender: AnyObject) {
         self.enableScan(true)
     }
     
-    func constraintsToMatchViews(view: UIView, matchToView: UIView) -> [NSLayoutConstraint] {
+    func constraintsToMatchViews(_ view: UIView, matchToView: UIView) -> [NSLayoutConstraint] {
         return [
             NSLayoutConstraint(
                 item: view,
-                attribute: .Left,
-                relatedBy: .Equal,
+                attribute: .left,
+                relatedBy: .equal,
                 toItem: matchToView,
-                attribute: .Left,
+                attribute: .left,
                 multiplier: 1.0, constant: 0.0),
             NSLayoutConstraint(
                 item: view,
-                attribute: .Right,
-                relatedBy: .Equal,
+                attribute: .right,
+                relatedBy: .equal,
                 toItem: matchToView,
-                attribute: .Right,
+                attribute: .right,
                 multiplier: 1.0, constant: 0.0),
             NSLayoutConstraint(
                 item: view,
-                attribute: .Top,
-                relatedBy: .Equal,
+                attribute: .top,
+                relatedBy: .equal,
                 toItem: matchToView,
-                attribute: .Top,
+                attribute: .top,
                 multiplier: 1.0, constant: 0.0),
             NSLayoutConstraint(
                 item: view,
-                attribute: .Bottom,
-                relatedBy: .Equal,
+                attribute: .bottom,
+                relatedBy: .equal,
                 toItem: matchToView,
-                attribute: .Bottom,
+                attribute: .bottom,
                 multiplier: 1.0, constant: 0.0),
             ]
     }
     
-    @IBAction func estimateButtonPressed(sender: UIButton) {
+    @IBAction func estimateButtonPressed(_ sender: UIButton) {
         
         
 //        - Add estimation view to current view
@@ -114,7 +117,7 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
 //      Tell estimate controller what points to show:
         
         let point_scale = self.pivo!.project_with_id(self.current_story!.project_id!).point_scale
-        self.estimateViewController!.pointScale = point_scale.componentsSeparatedByString(",")
+        self.estimateViewController!.pointScale = point_scale.components(separatedBy: ",")
         
         self.estimateViewController!.view.alpha = 0.0
         
@@ -122,12 +125,12 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
         self.view.addConstraints(step1Constraints)
         self.view.layoutIfNeeded()
         
-        UIView.animateWithDuration(
-            0.3,
+        UIView.animate(
+            withDuration: 0.3,
             delay: 0,
             usingSpringWithDamping: 0.96,
             initialSpringVelocity: 1.0,
-            options: UIViewAnimationOptions.CurveEaseInOut,
+            options: UIViewAnimationOptions(),
             animations: { () -> Void in
                 self.view.removeConstraints(step1Constraints)
                 self.estimateViewController!.view.alpha = 1.0
@@ -137,22 +140,22 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
             completion: nil)
     }
     
-    @IBAction func stateButtonPressed(sender: AnyObject) {
+    @IBAction func stateButtonPressed(_ sender: AnyObject) {
         let actionSheetController: UIAlertController = UIAlertController(
             title: "Change state",
             message: nil,
-            preferredStyle: .ActionSheet
+            preferredStyle: .actionSheet
         )
         
         //Create and add the Cancel action
-        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
             //Just dismiss the action sheet
         }
         actionSheetController.addAction(cancelAction)
         
         for state in states {
             //Create and add first option action
-            let stateAction: UIAlertAction = UIAlertAction(title: state.1, style: .Default) { action -> Void in
+            let stateAction: UIAlertAction = UIAlertAction(title: state.1, style: .default) { action -> Void in
                 if let story: Story = self.current_story {
                     if let pivo = self.pivo {
                         self.spinner.startAnimating()
@@ -164,16 +167,16 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
         }
         
         //Present the AlertController
-        self.presentViewController(actionSheetController, animated: true, completion: nil)
+        self.present(actionSheetController, animated: true, completion: nil)
     }
     
-    func scannedStory(story: Story) {
+    func scannedStory(_ story: Story) {
         self.spinner.stopAnimating()
         storyNameView.text = story.name
         self.current_story = story
         
         self.idLabel.text = String(format:"#%d", story.id!)
-        self.stateLabel.text = story.state?.capitalizedString
+        self.stateLabel.text = story.state?.capitalized
         if story.estimate == -1 {
             self.pointsLabel.text = "-"
         } else {
@@ -181,17 +184,15 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
         }
         
         self.userLabel.text = self.pivo!.project_with_id(story.project_id!).name
-        self.labelsLabel.text = story.labels.joinWithSeparator("\n")
+        self.labelsLabel.text = story.labels.joined(separator: "\n")
     }
     
-    func gotUser(userId: Int, name: String) {
+    func gotUser(_ userId: Int, name: String) {
 //        self.userLabel.text = name
         self.userId = userId
     }
     
-    func barcodeReader(barcodeReader: BarcodeReaderView, didFailReadingWithError error: NSError) {}
-    
-    func barcodeReader(barcodeReader: BarcodeReaderView, didFinishReadingString info: String) {
+    func didScan(_ info: String) {
         //handle success reading
         
         if let scannedString:String = info {
@@ -208,15 +209,28 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
         }
     }
     
+    func startScanner() {
+        self.scanner?.startScanning(resultBlock: { codes in
+            let codeObjects = codes as! [AVMetadataMachineReadableCodeObject]?
+            if self.scanningEnabled {
+                for code in codeObjects! {
+                    let stringValue = code.stringValue!
+                    self.didScan(stringValue)
+                }
+                
+            }
+            
+        }, error: nil)
+    }
     
-    @IBAction func openStoryButtonPressed(sender: AnyObject) {
+    @IBAction func openStoryButtonPressed(_ sender: AnyObject) {
         if let story: Story = self.current_story {
             let urlString: NSString = NSString(format: "pivotaltracker://s/%d", story.id!)
-            UIApplication.sharedApplication().openURL(NSURL(string: urlString as String)!)
+            UIApplication.shared.openURL(URL(string: urlString as String)!)
         }
     }
     
-    func initializeAPIWithKey(key: String) {
+    func initializeAPIWithKey(_ key: String) {
         
         self.pivo = PivoController(token: key)
         self.pivo!.delegate = self
@@ -226,15 +240,14 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cardView.layer.shadowColor = UIColor.blackColor().CGColor
+        cardView.layer.shadowColor = UIColor.black.cgColor
         cardView.layer.shadowOpacity = 0.4
-        cardView.layer.shadowOffset = CGSizeZero
+        cardView.layer.shadowOffset = CGSize.zero
         cardView.layer.shadowRadius = 30
         
-        self.camView.delegate = self
-        self.camView.barCodeTypes = [.Code128, .QR]
-        self.camView.startCapturing()
         self.enableScan(true)
+        
+        scanner = MTBBarcodeScanner(previewView: camView)
         
         self.camView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -243,43 +256,46 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
 
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         let pivokey = KeychainSwift().get("pivotalapikey")
         
         if (pivokey != nil) {
             initializeAPIWithKey(pivokey!)
         } else {
-            self.performSegueWithIdentifier("setup", sender: self)
+            self.performSegue(withIdentifier: "setup", sender: self)
         }
+        self.startScanner()
     }
     
-    func enableScan(enable: Bool) {
+    func enableScan(_ enable: Bool) {
+        scanningEnabled = enable
+        
         let anim_duration = 0.4
         
         if enable {
             
-            UIView.animateWithDuration(anim_duration, animations: { () -> Void in
+            UIView.animate(withDuration: anim_duration, animations: { () -> Void in
                 self.overlayButton.alpha = 0.0
                 self.blurView.effect = nil
             })
-            self.camView.startCapturing()
+            
             
         } else {
             
-            UIView.animateWithDuration(anim_duration, animations: { () -> Void in
+            UIView.animate(withDuration: anim_duration, animations: { () -> Void in
                 self.overlayButton.alpha = 1.0
-                self.blurView.effect = UIBlurEffect(style: .Dark)
+                self.blurView.effect = UIBlurEffect(style: .dark)
             })
-            self.camView.stopCapturing()
+            
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "estimate" {
-            segue.destinationViewController.view.backgroundColor = UIColor.clearColor()
-            segue.sourceViewController.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
+            segue.destination.view.backgroundColor = UIColor.clear
+            segue.source.modalPresentationStyle = UIModalPresentationStyle.currentContext
         }
         
     }
@@ -290,7 +306,7 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
         self.hideEstimateViewController()
     }
     
-    func estimationViewControllerDidSelectEstimate(estimate: Int) {
+    func estimationViewControllerDidSelectEstimate(_ estimate: Int) {
         if let story: Story = self.current_story {
             if let pivo = self.pivo {
                 self.spinner.startAnimating()
@@ -317,12 +333,12 @@ class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate,
         self.view.addConstraints(self.constraintsToMatchViews(self.estimateViewController!.view, matchToView: self.pointsLabel))
         
         
-        UIView.animateWithDuration(
-            0.3,
+        UIView.animate(
+            withDuration: 0.3,
             delay: 0,
             usingSpringWithDamping: 0.96,
             initialSpringVelocity: 1.0,
-            options: UIViewAnimationOptions.CurveEaseInOut,
+            options: UIViewAnimationOptions(),
             animations: { () -> Void in
                 self.estimateViewController!.view.alpha = 0.0
                 self.view.layoutIfNeeded()

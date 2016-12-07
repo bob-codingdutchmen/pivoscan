@@ -11,7 +11,7 @@ import UIKit
 
 protocol EstimationDelegate {
     func estimationViewControllerDidCancel()
-    func estimationViewControllerDidSelectEstimate(estimate: Int)
+    func estimationViewControllerDidSelectEstimate(_ estimate: Int)
 }
 
 
@@ -28,7 +28,7 @@ class EstimationViewController: UIViewController, UICollectionViewDelegate, UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView!.registerNib(UINib(nibName: "EstimateCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(UINib(nibName: "EstimateCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         // Do any additional setup after loading the view.
     }
 
@@ -37,11 +37,11 @@ class EstimationViewController: UIViewController, UICollectionViewDelegate, UICo
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancelButtonPressed(sender: AnyObject) {
+    @IBAction func cancelButtonPressed(_ sender: AnyObject) {
         self.delegate?.estimationViewControllerDidCancel()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         self.collectionView.reloadData()
     }
 
@@ -58,19 +58,19 @@ class EstimationViewController: UIViewController, UICollectionViewDelegate, UICo
     
     // MARK: UICollectionViewDataSource
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return self.pointScale.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell:EstimateCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! EstimateCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell:EstimateCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! EstimateCollectionViewCell
         
         // Configure the cell
         cell.estimateLabel.text = self.pointScale[indexPath.row]
@@ -94,7 +94,7 @@ class EstimationViewController: UIViewController, UICollectionViewDelegate, UICo
      }
      */
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.delegate?.estimationViewControllerDidSelectEstimate(Int(self.pointScale[indexPath.row])!)
     }
     

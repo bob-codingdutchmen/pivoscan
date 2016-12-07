@@ -9,12 +9,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>BarCodeReaderView.xcscheme</key>
+		<key>KeychainSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>KeychainSwift.xcscheme</key>
+		<key>MTBBarcodeScanner.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4C698C648EE4D43C6B8BE0BE1FE91737</key>
+		<key>38ACA430605AFB4229712A18BDDF5086</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5A38673ECC0E0676CE38B8B7957A5724</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<key>8B416A36AAB595F54AED0DF627297FDF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F20F352576C43AFD2B6E390A78E929BF</key>
+		<key>9DF61A38842AB92FE7443ED3A096DCD3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

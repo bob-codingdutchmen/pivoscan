@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0E44236A1DF83EE8002C67ED /* BatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4423691DF83EE8002C67ED /* BatchViewController.swift */; };
+		0E47AC421DF8601700DBAB29 /* beep-07.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E47AC411DF8601700DBAB29 /* beep-07.wav */; };
+		0E47AC441DF862CF00DBAB29 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47AC431DF862CF00DBAB29 /* Story.swift */; };
+		0E47AC461DF867EA00DBAB29 /* Shoot_02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E47AC451DF867EA00DBAB29 /* Shoot_02.wav */; };
 		0E667A961C9AE95F0015824A /* EstimateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E667A941C9AE95F0015824A /* EstimateCollectionViewCell.swift */; };
 		0E667A971C9AE95F0015824A /* EstimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E667A951C9AE95F0015824A /* EstimateViewController.swift */; };
 		0E667AAD1C9AEAAF0015824A /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E667A991C9AEAAF0015824A /* Roboto-Black.ttf */; };
@@ -64,11 +67,14 @@
 		AAE4C78A1B468FA40031DF4F /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE4C7891B468FA40031DF4F /* libiconv.dylib */; };
 		AAE4C78C1B468FA90031DF4F /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE4C78B1B468FA90031DF4F /* libc++.dylib */; };
 		AAE4C78E1B468FAE0031DF4F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE4C78D1B468FAE0031DF4F /* libz.dylib */; };
-		ED324DEB5ED88388823B92D1 /* Pods_Pivoscan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376102DC1216B624E07977B6 /* Pods_Pivoscan.framework */; };
+		E94DB01AB1E71F7C7D511F65 /* Pods_Pivoscan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6FECD486086CB14B094562 /* Pods_Pivoscan.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E4423691DF83EE8002C67ED /* BatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchViewController.swift; sourceTree = "<group>"; };
+		0E47AC411DF8601700DBAB29 /* beep-07.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-07.wav"; sourceTree = "<group>"; };
+		0E47AC431DF862CF00DBAB29 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		0E47AC451DF867EA00DBAB29 /* Shoot_02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Shoot_02.wav; sourceTree = "<group>"; };
 		0E667A941C9AE95F0015824A /* EstimateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimateCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E667A951C9AE95F0015824A /* EstimateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimateViewController.swift; sourceTree = "<group>"; };
 		0E667A991C9AEAAF0015824A /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -117,10 +123,7 @@
 		0EBB00CC1C88D5DF003C4529 /* ic_state@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_state@2x.png"; sourceTree = "<group>"; };
 		0EBB00CD1C88D5DF003C4529 /* ic_state@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_state@3x.png"; sourceTree = "<group>"; };
 		0ED7F2491C788CDF0037C989 /* PivoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PivoController.swift; sourceTree = "<group>"; };
-		2DB42F9B5C4E29D727595F90 /* Pods-Pivoscan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pivoscan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pivoscan/Pods-Pivoscan.debug.xcconfig"; sourceTree = "<group>"; };
-		376102DC1216B624E07977B6 /* Pods_Pivoscan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pivoscan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EAFB4ECC61D839908407BB8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		9FB64E418CF49FE85FC077E7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		27B4224A487794630C930994 /* Pods-Pivoscan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pivoscan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pivoscan/Pods-Pivoscan.debug.xcconfig"; sourceTree = "<group>"; };
 		AA13470B1BFE118B00B1F2B2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AAE4C75A1B4681650031DF4F /* Pivoscan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pivoscan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE4C75E1B4681650031DF4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 		AAE4C7891B468FA40031DF4F /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		AAE4C78B1B468FA90031DF4F /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		AAE4C78D1B468FAE0031DF4F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DA6FECD486086CB14B094562 /* Pods_Pivoscan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pivoscan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD1C859C6BDEB6221C616074 /* Pods-Pivoscan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pivoscan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pivoscan/Pods-Pivoscan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +146,7 @@
 				AAE4C78E1B468FAE0031DF4F /* libz.dylib in Frameworks */,
 				AAE4C78C1B468FA90031DF4F /* libc++.dylib in Frameworks */,
 				AAE4C78A1B468FA40031DF4F /* libiconv.dylib in Frameworks */,
-				ED324DEB5ED88388823B92D1 /* Pods_Pivoscan.framework in Frameworks */,
+				E94DB01AB1E71F7C7D511F65 /* Pods_Pivoscan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,20 +208,19 @@
 			path = images;
 			sourceTree = "<group>";
 		};
-		3E6492D3EC263F19F3597BDF /* Pods */ = {
+		553F843AE61685EB91F324C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7EAFB4ECC61D839908407BB8 /* Pods.debug.xcconfig */,
-				9FB64E418CF49FE85FC077E7 /* Pods.release.xcconfig */,
-				2DB42F9B5C4E29D727595F90 /* Pods-Pivoscan.debug.xcconfig */,
+				27B4224A487794630C930994 /* Pods-Pivoscan.debug.xcconfig */,
+				FD1C859C6BDEB6221C616074 /* Pods-Pivoscan.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		80A5ADCBD3AFD4E0AA37120F /* Frameworks */ = {
+		691F6B275D4084480BA0B09C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				376102DC1216B624E07977B6 /* Pods_Pivoscan.framework */,
+				DA6FECD486086CB14B094562 /* Pods_Pivoscan.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -228,8 +232,8 @@
 				AAED27F01B46B51C00DA9911 /* Dependencies */,
 				AAE4C75C1B4681650031DF4F /* SwiftSample */,
 				AAE4C75B1B4681650031DF4F /* Products */,
-				3E6492D3EC263F19F3597BDF /* Pods */,
-				80A5ADCBD3AFD4E0AA37120F /* Frameworks */,
+				553F843AE61685EB91F324C4 /* Pods */,
+				691F6B275D4084480BA0B09C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -244,6 +248,8 @@
 		AAE4C75C1B4681650031DF4F /* SwiftSample */ = {
 			isa = PBXGroup;
 			children = (
+				0E47AC451DF867EA00DBAB29 /* Shoot_02.wav */,
+				0E47AC411DF8601700DBAB29 /* beep-07.wav */,
 				0E667A981C9AEAAF0015824A /* fonts */,
 				0E667A941C9AE95F0015824A /* EstimateCollectionViewCell.swift */,
 				0E667A951C9AE95F0015824A /* EstimateViewController.swift */,
@@ -259,6 +265,7 @@
 				0E667AC81C9AEBEC0015824A /* EstimationViewController.xib */,
 				0E667ACB1C9AEDBB0015824A /* EstimateCollectionViewCell.xib */,
 				0E4423691DF83EE8002C67ED /* BatchViewController.swift */,
+				0E47AC431DF862CF00DBAB29 /* Story.swift */,
 			);
 			path = SwiftSample;
 			sourceTree = "<group>";
@@ -288,12 +295,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAE4C7791B4681660031DF4F /* Build configuration list for PBXNativeTarget "Pivoscan" */;
 			buildPhases = (
-				2C1E35561F086FC30A773D8B /* Check Pods Manifest.lock */,
+				D5BE4B04922F7D20DC275AFD /* [CP] Check Pods Manifest.lock */,
 				AAE4C7561B4681650031DF4F /* Sources */,
 				AAE4C7571B4681650031DF4F /* Frameworks */,
 				AAE4C7581B4681650031DF4F /* Resources */,
-				1E37C71A6BC4A9655C0D3BC9 /* Embed Pods Frameworks */,
-				E8809FDC003E30BE456CD992 /* Copy Pods Resources */,
+				A593D1F8A169AD89303C93AB /* [CP] Embed Pods Frameworks */,
+				9077D7A5D5ABDC0DF23BA2C8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -317,7 +324,7 @@
 					AAE4C7591B4681650031DF4F = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = F3U6T222L4;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -380,7 +387,9 @@
 				0E7B08E21C8B100500782AB0 /* ic_check_green@3x.png in Resources */,
 				0E667AAE1C9AEAAF0015824A /* Roboto-BlackItalic.ttf in Resources */,
 				0E667AB91C9AEAAF0015824A /* Roboto-MediumItalic.ttf in Resources */,
+				0E47AC421DF8601700DBAB29 /* beep-07.wav in Resources */,
 				0E7B08E11C8B100500782AB0 /* ic_check_green@2x.png in Resources */,
+				0E47AC461DF867EA00DBAB29 /* Shoot_02.wav in Resources */,
 				0E667AB11C9AEAAF0015824A /* Roboto-BoldCondensedItalic.ttf in Resources */,
 				0EBB00D61C88D5DF003C4529 /* ic_estimate@3x.png in Resources */,
 				0EBB00DA1C88D5DF003C4529 /* ic_state.png in Resources */,
@@ -396,14 +405,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1E37C71A6BC4A9655C0D3BC9 /* Embed Pods Frameworks */ = {
+		9077D7A5D5ABDC0DF23BA2C8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pivoscan/Pods-Pivoscan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A593D1F8A169AD89303C93AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,34 +435,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pivoscan/Pods-Pivoscan-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2C1E35561F086FC30A773D8B /* Check Pods Manifest.lock */ = {
+		D5BE4B04922F7D20DC275AFD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E8809FDC003E30BE456CD992 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pivoscan/Pods-Pivoscan-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -456,6 +465,7 @@
 				0E44236A1DF83EE8002C67ED /* BatchViewController.swift in Sources */,
 				0ED7F24A1C788CDF0037C989 /* PivoController.swift in Sources */,
 				AAE4C7601B4681650031DF4F /* AppDelegate.swift in Sources */,
+				0E47AC441DF862CF00DBAB29 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +528,7 @@
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -558,6 +569,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -565,7 +577,7 @@
 		};
 		AAE4C77A1B4681660031DF4F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DB42F9B5C4E29D727595F90 /* Pods-Pivoscan.debug.xcconfig */;
+			baseConfigurationReference = 27B4224A487794630C930994 /* Pods-Pivoscan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -576,7 +588,7 @@
 				DEVELOPMENT_TEAM = F3U6T222L4;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = (
@@ -593,13 +605,13 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		AAE4C77B1B4681660031DF4F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DB42F9B5C4E29D727595F90 /* Pods-Pivoscan.debug.xcconfig */;
+			baseConfigurationReference = FD1C859C6BDEB6221C616074 /* Pods-Pivoscan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -609,13 +621,13 @@
 				DEVELOPMENT_TEAM = F3U6T222L4;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.scandit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

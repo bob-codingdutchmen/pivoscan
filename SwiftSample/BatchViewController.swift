@@ -7,35 +7,36 @@
 //
 
 import UIKit
-import BarCodeReaderView
+import MTBBarcodeScanner
 import KeychainSwift
+import AudioToolbox
 
 
-class BatchViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate, UITableViewDataSource, UITableViewDelegate {
+class BatchViewController: UIViewController, PivoDelegate, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var camView: BarcodeReaderView!
+    @IBOutlet weak var camView:UIView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var storiesTableView: UITableView!
     
+    @IBOutlet weak var label: UILabel!
     var pivo : PivoController?
     var userId : Int?
     
-    var scannedStories = [String()]
+    var scanner: MTBBarcodeScanner?
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    
+    var scannedStories: [Story] = []
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.camView.delegate = self
-        self.camView.barCodeTypes = [.Code128, .QR]
-        self.camView.startCapturing()
-        self.enableScan(true)
+        scanner = MTBBarcodeScanner(previewView: camView)
         
-        self.camView.translatesAutoresizingMaskIntoConstraints = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,20 +44,21 @@ class BatchViewController: UIViewController, PivoDelegate, BarcodeReaderViewDele
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         let pivokey = KeychainSwift().get("pivotalapikey")
         
         if (pivokey != nil) {
             initializeAPIWithKey(pivokey!)
         } else {
-            self.performSegueWithIdentifier("setup", sender: self)
+            self.performSegue(withIdentifier: "setup", sender: self)
         }
+        self.startScanner()
     }
     
     // // // // // // // // // // // // // // // //
     
-    func initializeAPIWithKey(key: String) {
+    func initializeAPIWithKey(_ key: String) {
         
         self.pivo = PivoController(token: key)
         self.pivo!.delegate = self
@@ -64,80 +66,95 @@ class BatchViewController: UIViewController, PivoDelegate, BarcodeReaderViewDele
     }
     
     
-    @IBAction func backButtonPressed(sender: AnyObject) {
-        self.camView.stopCapturing()
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backButtonPressed(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: PivoDelegate
-    func gotUser(userId: Int, name: String) {
+    func gotUser(_ userId: Int, name: String) {
         //        self.userLabel.text = name
         self.userId = userId
     }
     
-    func scannedStory(story: Story) {
-//        self.spinner.stopAnimating()
-//        storyNameView.text = story.name
-//        self.current_story = story
-//        
-//        self.idLabel.text = String(format:"#%d", story.id!)
-//        self.stateLabel.text = story.state?.capitalizedString
-//        if story.estimate == -1 {
-//            self.pointsLabel.text = "-"
-//        } else {
-//            self.pointsLabel.text = String(format:"%d", story.estimate)
-//        }
-//        
-//        self.userLabel.text = self.pivo!.project_with_id(story.project_id!).name
-//        self.labelsLabel.text = story.labels.joinWithSeparator("\n")
+    func scannedStory(_ story: Story) {
+        if let i = self.scannedStories.index(of: story) {
+            self.scannedStories[i] = story
+            self.storiesTableView.reloadRows(at: [IndexPath(row: i, section: 0)], with: .fade)
+        }
+
     }
     
-    // MARK: Barcode scanner thing
+
     
-    func barcodeReader(barcodeReader: BarcodeReaderView, didFailReadingWithError error: NSError) {}
     
-    func barcodeReader(barcodeReader: BarcodeReaderView, didFinishReadingString info: String) {
-        //handle success reading
-        
-        if let scannedString:String = info {
-            if scannedString.hasPrefix("#") {
+    func startScanner() {
+        self.scanner?.startScanning(resultBlock: { codes in
+            let codeObjects = codes as! [AVMetadataMachineReadableCodeObject]?
+            for code in codeObjects! {
                 
-                if let story_id:Int = Int(String(scannedString.characters.dropFirst())) {
-                    if let pivo = self.pivo {
-                        self.spinner.startAnimating()
-                        pivo.get_story_with_id(story_id)
-                        self.enableScan(false)
+                if code.stringValue.hasPrefix("#") {
+                    
+
+                    if let story_id:Int = Int(String(code.stringValue.characters.dropFirst())) {
+                        let newStory = Story(id: story_id)
+                        if self.scannedStories.contains(newStory) {
+                            return
+                        }
+                        
+                        self.storiesTableView.beginUpdates()
+                        let stringValue = code.stringValue!
+                        
+                        self.scannedStories.insert(newStory, at: 0)
+                        print("Found code: \(stringValue)")
+                        
+                        self.ding()
+                        self.label.text = String(format: "%d stories", self.scannedStories.count)
+                        
+                        self.storiesTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
+                        self.storiesTableView.endUpdates()
+                        if let pivo = self.pivo {
+                            pivo.get_story_with_id(story_id)
+                            
+                        }
                     }
                 }
             }
+            
+        }, error: nil)
+    }
+    
+    
+    func ding() {
+        
+        if let soundURL = Bundle.main.url(forResource: "Shoot_02", withExtension: "wav") {
+            var mySound: SystemSoundID = 0
+            AudioServicesCreateSystemSoundID(soundURL as URL as CFURL, &mySound)
+            // Play
+            AudioServicesPlaySystemSound(mySound);
         }
     }
+   
     
-    func enableScan(enable: Bool) {
-    
-    }
-
     
     // MARK Tableview stuff
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return scannedStories.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Getting the right element
         let story = scannedStories[indexPath.row]
         
         // Instantiate a cell
         let cellIdentifier = "Storycell"
-//        dequeueReusableCellWithIdentifier(identifier: String) -> UITableViewCell?
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
             ?? UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
         
         // Adding the right informations
-        cell.textLabel?.text = story
-        cell.detailTextLabel?.text = "test"
+        cell.textLabel?.text = String(format: "#%d", story.id!)
+        cell.detailTextLabel?.text = story.name
         
         // Returning the cell
         return cell

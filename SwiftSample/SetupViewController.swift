@@ -28,21 +28,21 @@ class SetupViewController: UIViewController, PivoDelegate, UITextFieldDelegate {
         self.startPivoButton.alpha = 0.0
     }
     
-    @IBAction func openSettingsButtonPressed(sender: AnyObject) {
+    @IBAction func openSettingsButtonPressed(_ sender: AnyObject) {
         
         let urlString: NSString = "https://www.pivotaltracker.com/profile"
-        UIApplication.sharedApplication().openURL(NSURL(string: urlString as String)!)
+        UIApplication.shared.openURL(URL(string: urlString as String)!)
     }
 
-    @IBAction func startPivoButtonPressed(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func startPivoButtonPressed(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func tokenFieldValueChanged(sender: AnyObject) {
+    @IBAction func tokenFieldValueChanged(_ sender: AnyObject) {
 
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.verifyAccessToken()
         textField.resignFirstResponder()
         return true
@@ -50,14 +50,14 @@ class SetupViewController: UIViewController, PivoDelegate, UITextFieldDelegate {
     
     func verifyAccessToken() {
         let token = self.tokenField.text
-        let trimmedToken = token!.stringByTrimmingCharactersInSet(
-            NSCharacterSet.whitespaceAndNewlineCharacterSet()
+        let trimmedToken = token!.trimmingCharacters(
+            in: CharacterSet.whitespacesAndNewlines
         )
         let charCount: Int = trimmedToken.characters.count
         
         if charCount == 32 {
             self.spinner.startAnimating()
-            self.tokenField.enabled = false
+            self.tokenField.isEnabled = false
             
             self.resultLabel.alpha = 1.0
             self.resultLabel.text = "Verifying…"
@@ -81,7 +81,7 @@ class SetupViewController: UIViewController, PivoDelegate, UITextFieldDelegate {
     }
     
     
-    func gotUser(userId: Int, name: String) {
+    func gotUser(_ userId: Int, name: String) {
         self.spinner.stopAnimating()
         self.resultLabel.alpha = 1.0
         self.resultImageView.alpha = 1.0
@@ -92,5 +92,5 @@ class SetupViewController: UIViewController, PivoDelegate, UITextFieldDelegate {
         self.startPivoButton.alpha = 1.0;
     }
     
-    func scannedStory(story: Story) {}
+    func scannedStory(_ story: Story) {}
 }

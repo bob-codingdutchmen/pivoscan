@@ -12,23 +12,27 @@ import KeychainSwift
 
 
 protocol PivoDelegate {
-    func scannedStory(story: Story)
-    func gotUser(userId: Int, name: String)
+    func scannedStory(_ story: Story)
+    func gotUser(_ userId: Int, name: String)
 }
 
 enum StoryType {
-    case Bug, Chore, Release, Story
+    case bug, chore, release, story
 }
 
-class Story {
+class Story: Equatable {
     var id: Int?
     var estimate: Int = -1
     var name: String?
     var state: String?
     var url: String?
     var project_id: Int?
-    var story_type: StoryType = .Story
+    var story_type: StoryType = .story
     var labels = [String]()
+    
+    init(id: Int) {
+        self.id = id
+    }
     
     init(id: Int, estimate: Int, name: String) {
         self.id = id
@@ -46,18 +50,18 @@ class Story {
         let kind: String = dict["story_type"] as! String
         switch kind {
         case "story":
-            self.story_type = .Story
+            self.story_type = .story
         case "release":
-            self.story_type = .Release
+            self.story_type = .release
         case "bug":
-            self.story_type = .Bug
+            self.story_type = .bug
         case "chore":
-            self.story_type = .Chore
+            self.story_type = .chore
         default:
-            self.story_type = .Story
+            self.story_type = .story
         }
         
-        if self.story_type == .Story || self.story_type == .Bug {
+        if self.story_type == .story || self.story_type == .bug {
             let estimate = dict["estimate"]
             if (estimate! != nil) {
                 self.estimate = dict["estimate"] as! Int
@@ -68,11 +72,16 @@ class Story {
         
         // Labels
         for labelDict in dict["labels"] as! NSArray {
-            self.labels += [labelDict["name"] as! String]
+            self.labels += [(labelDict as! NSDictionary)["name"] as! String]
         }
     }
+    
+
 }
 
+func ==(lhs:Story, rhs:Story) -> Bool { // Implement Equatable
+    return lhs.id == rhs.id
+}
 
 class Project {
     var id: Int
@@ -101,55 +110,75 @@ class PivoController {
         let headers = [
             "X-TrackerToken": token!
         ]
-        let url = String("https://www.pivotaltracker.com/services/v5/me")
-        Alamofire.request(.GET, url, headers: headers)
+        
+        Alamofire.request("https://www.pivotaltracker.com/services/v5/me", headers: headers)
             .responseJSON { response in
                 
+                
                 if let JSON = response.result.value {
-                    let userId = JSON["id"] as! Int
-                    let name = JSON["name"] as! String
+                    
+                    guard let tResult = JSON as? [String:Any]  else {
+                        return
+                    }
+                    
+                    let userId = tResult["id"] as! NSNumber
+                    let name = tResult["name"] as! String
+                
+                    
                     let keychain = KeychainSwift()
                     
                     keychain.set(String(format: "%d", userId), forKey: "userid")
                     keychain.set(name, forKey: "username")
                     
-                    self.delegate?.gotUser(userId, name: name)
+                    self.delegate?.gotUser(userId.intValue, name: name)
                     
-                    for projectDict in JSON["projects"] as! NSArray {
-                        let proj_name = projectDict["project_name"] as! String
-                        let proj_id = projectDict["project_id"] as! Int
+                    for projectDict in tResult["projects"] as! NSArray {
+                        
+                        guard let projectDictionary = projectDict as? [String:Any]  else {
+                            return
+                        }
+                        let proj_name = projectDictionary["project_name"] as! String
+                        let proj_id = projectDictionary["project_id"] as! Int
                         
                         let url = String(format:"https://www.pivotaltracker.com/services/v5/projects/%d", proj_id)
-                        Alamofire.request(.GET, url, headers: headers)
+                        Alamofire.request(url, headers: headers)
                             .responseJSON { response in
                                 if let PROJ = response.result.value {
+                                    
+                                    guard let pDict = PROJ as? [String:Any]  else {
+                                        return
+                                    }
                                     self.projects![proj_id] = Project(
                                         id: proj_id,
                                         name: proj_name,
-                                        point_scale: PROJ["point_scale"] as! String
+                                        point_scale: pDict["point_scale"] as! String
                                     )
                                 }
                         }
                     }
+                    
                 }
         }
     }
     
-    func project_with_id(project_id: Int) -> Project {
+    func project_with_id(_ project_id: Int) -> Project {
         return self.projects![project_id]!
     }
     
-    func get_story_with_id(id: Int) {
+    func get_story_with_id(_ id: Int) {
         let headers = [
             "X-TrackerToken": token!
         ]
         let url = String(
             format: "https://www.pivotaltracker.com/services/v5/stories/%d", id)
-        Alamofire.request(.GET, url, headers: headers)
+        Alamofire.request(url, headers: headers)
             .responseJSON { response in
                 
                 if let JSON = response.result.value {
-                    let story = Story(dict:JSON)
+                    guard let resultDict = JSON as? NSDictionary else {
+                        return
+                    }
+                    let story = Story(dict:resultDict)
                     self.delegate?.scannedStory(story)
                 }
         }
@@ -159,25 +188,28 @@ class PivoController {
         let headers = [
             "X-TrackerToken": token!
         ]
-        let url = String("https://www.pivotaltracker.com/services/v5/me")
-        Alamofire.request(.GET, url, headers: headers)
+        let url = "https://www.pivotaltracker.com/services/v5/me"
+        Alamofire.request(url, headers: headers)
             .responseJSON { response in
                 
                 if let JSON = response.result.value {
-                    let userId = JSON["id"] as! Int
-                    let name = JSON["name"] as! String
+                    guard let resultDict = JSON as? [String:Any] else {
+                        return
+                    }
+                    let userId = resultDict["id"] as! Int
+                    let name = resultDict["name"] as! String
                     self.delegate?.gotUser(userId, name: name)
                 }
         }
         
     }
     
-    func set_story_estimate(id: Int, estimate: Int) {
+    func set_story_estimate(_ id: Int, estimate: Int) {
         
         let headers = [
             "X-TrackerToken": token!
         ]
-        var realEstimate: AnyObject = estimate
+        var realEstimate: AnyObject = estimate as AnyObject
         if estimate == -1 {
             realEstimate = NSNull()
         }
@@ -186,17 +218,24 @@ class PivoController {
             "estimate": realEstimate
         ]
         
-        Alamofire.request(.PUT, url, headers: headers, parameters: parameters, encoding: .JSON)
+        Alamofire.request(url,
+                          method: .put,
+                          parameters: parameters,
+                          encoding: JSONEncoding.default,
+                          headers: headers)
             .responseJSON { response in
                 
                 if let JSON = response.result.value {
-                    let story = Story(dict:JSON)
+                    guard let resultDict = JSON as? NSDictionary else {
+                        return
+                    }
+                    let story = Story(dict:resultDict)
                     self.delegate?.scannedStory(story)
                 }
         }
     }
     
-    func set_story_state(id: Int, state: String, user: Int?) {
+    func set_story_state(_ id: Int, state: String, user: Int?) {
         
         let headers = [
             "X-TrackerToken": token!
@@ -206,11 +245,18 @@ class PivoController {
             "current_state": state
         ]
         
-        Alamofire.request(.PUT, url, headers: headers, parameters: parameters, encoding: .JSON)
+        Alamofire.request(url,
+                          method: .put,
+                          parameters: parameters,
+                          encoding: JSONEncoding.default,
+                          headers: headers)
             .responseJSON { response in
                 
                 if let JSON = response.result.value {
-                    let story = Story(dict:JSON)
+                    guard let resultDict = JSON as? NSDictionary else {
+                        return
+                    }
+                    let story = Story(dict:resultDict)
                     self.delegate?.scannedStory(story)
                     
 //                    Set owner if we started this story:
@@ -218,8 +264,11 @@ class PivoController {
                         let ownerParams = [
                             "id": user!
                         ]
-                        let ownerUrl = String(format: "https://www.pivotaltracker.com/services/v5/projects/%d/stories/%d/owners", JSON["project_id"] as! Int, id)
-                        Alamofire.request(.POST, ownerUrl, headers: headers, parameters: ownerParams, encoding: .JSON)
+                        guard let jsonDict = JSON as? NSDictionary else {
+                            return
+                        }
+                        let ownerUrl = String(format: "https://www.pivotaltracker.com/services/v5/projects/%d/stories/%d/owners", jsonDict["project_id"] as! Int, id)
+                        Alamofire.request(ownerUrl, method: .post, parameters: ownerParams, encoding: JSONEncoding.default, headers: headers)
                     }
                 }
         }

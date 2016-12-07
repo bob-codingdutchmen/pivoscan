@@ -5,8 +5,8 @@
 use_frameworks!
 
 target 'Pivoscan' do
-    pod 'Alamofire', '~> 3.0'
-    pod 'KeychainSwift', '~> 3.0'
-    pod 'BarCodeReaderView'
+    pod 'Alamofire', '~> 4.0'
+    pod 'KeychainSwift', '~> 7.0'
+    # pod 'BarCodeReaderView'
+    pod 'MTBBarcodeScanner', '~> 3.1'
 end
-
