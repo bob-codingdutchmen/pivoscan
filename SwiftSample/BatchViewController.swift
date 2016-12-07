@@ -80,6 +80,14 @@ class BatchViewController: UIViewController, PivoDelegate, UITableViewDataSource
         if let i = self.scannedStories.index(of: story) {
             self.scannedStories[i] = story
             self.storiesTableView.reloadRows(at: [IndexPath(row: i, section: 0)], with: .fade)
+            
+            // Set stories to planned if not already started / finished / etc
+            if story.state == "unscheduled" {
+                if let pivo = self.pivo {
+                    pivo.set_story_state(story.id!, state: "planned", user: self.userId)
+                }
+            }
+            
         }
 
     }
@@ -153,7 +161,11 @@ class BatchViewController: UIViewController, PivoDelegate, UITableViewDataSource
             ?? UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
         
         // Adding the right informations
-        cell.textLabel?.text = String(format: "#%d", story.id!)
+        var title = String(format: "#%d ", story.id!)
+        if let state = story.state {
+            title.append(state)
+        }
+        cell.textLabel?.text = title
         cell.detailTextLabel?.text = story.name
         
         // Returning the cell
