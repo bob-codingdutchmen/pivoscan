@@ -256,6 +256,10 @@ class PivoController {
                     guard let resultDict = JSON as? NSDictionary else {
                         return
                     }
+                    print("Status code: ", resultDict["http_status"] ?? "-")
+                    if resultDict["http_status"] as? String ?? "200" == "500" {
+                        return
+                    }
                     let story = Story(dict:resultDict)
                     self.delegate?.scannedStory(story)
                     

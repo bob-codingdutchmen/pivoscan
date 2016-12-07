@@ -11,6 +11,9 @@
 		0E47AC421DF8601700DBAB29 /* beep-07.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E47AC411DF8601700DBAB29 /* beep-07.wav */; };
 		0E47AC441DF862CF00DBAB29 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E47AC431DF862CF00DBAB29 /* Story.swift */; };
 		0E47AC461DF867EA00DBAB29 /* Shoot_02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E47AC451DF867EA00DBAB29 /* Shoot_02.wav */; };
+		0E47AC481DF86F3900DBAB29 /* Collect_Point_01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E47AC471DF86F3900DBAB29 /* Collect_Point_01.wav */; };
+		0E47AC4A1DF8709D00DBAB29 /* Craft_00.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E47AC491DF8709D00DBAB29 /* Craft_00.wav */; };
+		0E47AC4C1DF8725D00DBAB29 /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E47AC4B1DF8725D00DBAB29 /* ding.wav */; };
 		0E667A961C9AE95F0015824A /* EstimateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E667A941C9AE95F0015824A /* EstimateCollectionViewCell.swift */; };
 		0E667A971C9AE95F0015824A /* EstimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E667A951C9AE95F0015824A /* EstimateViewController.swift */; };
 		0E667AAD1C9AEAAF0015824A /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E667A991C9AEAAF0015824A /* Roboto-Black.ttf */; };
@@ -75,6 +78,9 @@
 		0E47AC411DF8601700DBAB29 /* beep-07.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-07.wav"; sourceTree = "<group>"; };
 		0E47AC431DF862CF00DBAB29 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		0E47AC451DF867EA00DBAB29 /* Shoot_02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Shoot_02.wav; sourceTree = "<group>"; };
+		0E47AC471DF86F3900DBAB29 /* Collect_Point_01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Collect_Point_01.wav; sourceTree = "<group>"; };
+		0E47AC491DF8709D00DBAB29 /* Craft_00.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Craft_00.wav; sourceTree = "<group>"; };
+		0E47AC4B1DF8725D00DBAB29 /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
 		0E667A941C9AE95F0015824A /* EstimateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimateCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E667A951C9AE95F0015824A /* EstimateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimateViewController.swift; sourceTree = "<group>"; };
 		0E667A991C9AEAAF0015824A /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -248,6 +254,9 @@
 		AAE4C75C1B4681650031DF4F /* SwiftSample */ = {
 			isa = PBXGroup;
 			children = (
+				0E47AC4B1DF8725D00DBAB29 /* ding.wav */,
+				0E47AC491DF8709D00DBAB29 /* Craft_00.wav */,
+				0E47AC471DF86F3900DBAB29 /* Collect_Point_01.wav */,
 				0E47AC451DF867EA00DBAB29 /* Shoot_02.wav */,
 				0E47AC411DF8601700DBAB29 /* beep-07.wav */,
 				0E667A981C9AEAAF0015824A /* fonts */,
@@ -378,11 +387,14 @@
 				0E667ABC1C9AEAAF0015824A /* Roboto-ThinItalic.ttf in Resources */,
 				0EBB00D01C88D5DF003C4529 /* bg_purple@3x.png in Resources */,
 				0E7B08E31C8B100500782AB0 /* ic_error_red.png in Resources */,
+				0E47AC4C1DF8725D00DBAB29 /* ding.wav in Resources */,
+				0E47AC4A1DF8709D00DBAB29 /* Craft_00.wav in Resources */,
 				0EBB00D41C88D5DF003C4529 /* ic_estimate.png in Resources */,
 				0E667AB21C9AEAAF0015824A /* Roboto-BoldItalic.ttf in Resources */,
 				0EBB00D81C88D5DF003C4529 /* ic_scan@2x.png in Resources */,
 				0EBB00D51C88D5DF003C4529 /* ic_estimate@2x.png in Resources */,
 				0E667AB31C9AEAAF0015824A /* Roboto-Condensed.ttf in Resources */,
+				0E47AC481DF86F3900DBAB29 /* Collect_Point_01.wav in Resources */,
 				0E667AC01C9AEAAF0015824A /* RobotoSlab-Thin.ttf in Resources */,
 				0E7B08E21C8B100500782AB0 /* ic_check_green@3x.png in Resources */,
 				0E667AAE1C9AEAAF0015824A /* Roboto-BlackItalic.ttf in Resources */,

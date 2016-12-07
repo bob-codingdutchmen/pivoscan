@@ -85,6 +85,7 @@ class BatchViewController: UIViewController, PivoDelegate, UITableViewDataSource
             if story.state == "unscheduled" {
                 if let pivo = self.pivo {
                     pivo.set_story_state(story.id!, state: "planned", user: self.userId)
+                    self.ding(sound: "Collect_Point_01")
                 }
             }
             
@@ -115,7 +116,7 @@ class BatchViewController: UIViewController, PivoDelegate, UITableViewDataSource
                         self.scannedStories.insert(newStory, at: 0)
                         print("Found code: \(stringValue)")
                         
-                        self.ding()
+                        self.ding(sound: "ding")
                         self.label.text = String(format: "%d stories", self.scannedStories.count)
                         
                         self.storiesTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
@@ -132,9 +133,9 @@ class BatchViewController: UIViewController, PivoDelegate, UITableViewDataSource
     }
     
     
-    func ding() {
+    func ding(sound: String) {
         
-        if let soundURL = Bundle.main.url(forResource: "Shoot_02", withExtension: "wav") {
+        if let soundURL = Bundle.main.url(forResource: sound, withExtension: "wav") {
             var mySound: SystemSoundID = 0
             AudioServicesCreateSystemSoundID(soundURL as URL as CFURL, &mySound)
             // Play
