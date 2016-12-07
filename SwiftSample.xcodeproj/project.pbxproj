@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E44236A1DF83EE8002C67ED /* BatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4423691DF83EE8002C67ED /* BatchViewController.swift */; };
 		0E667A961C9AE95F0015824A /* EstimateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E667A941C9AE95F0015824A /* EstimateCollectionViewCell.swift */; };
 		0E667A971C9AE95F0015824A /* EstimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E667A951C9AE95F0015824A /* EstimateViewController.swift */; };
 		0E667AAD1C9AEAAF0015824A /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E667A991C9AEAAF0015824A /* Roboto-Black.ttf */; };
@@ -67,6 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E4423691DF83EE8002C67ED /* BatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchViewController.swift; sourceTree = "<group>"; };
 		0E667A941C9AE95F0015824A /* EstimateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimateCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E667A951C9AE95F0015824A /* EstimateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimateViewController.swift; sourceTree = "<group>"; };
 		0E667A991C9AEAAF0015824A /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				0E667AC71C9AEBEC0015824A /* EstimationViewController.swift */,
 				0E667AC81C9AEBEC0015824A /* EstimationViewController.xib */,
 				0E667ACB1C9AEDBB0015824A /* EstimateCollectionViewCell.xib */,
+				0E4423691DF83EE8002C67ED /* BatchViewController.swift */,
 			);
 			path = SwiftSample;
 			sourceTree = "<group>";
@@ -313,7 +316,7 @@
 				TargetAttributes = {
 					AAE4C7591B4681650031DF4F = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 9Z539P2F7G;
+						DevelopmentTeam = F3U6T222L4;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -450,6 +453,7 @@
 				0E667A961C9AE95F0015824A /* EstimateCollectionViewCell.swift in Sources */,
 				0E667AC91C9AEBEC0015824A /* EstimationViewController.swift in Sources */,
 				AAE4C7621B4681650031DF4F /* ViewController.swift in Sources */,
+				0E44236A1DF83EE8002C67ED /* BatchViewController.swift in Sources */,
 				0ED7F24A1C788CDF0037C989 /* PivoController.swift in Sources */,
 				AAE4C7601B4681650031DF4F /* AppDelegate.swift in Sources */,
 			);
@@ -508,7 +512,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
@@ -550,7 +554,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -569,6 +573,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = F3U6T222L4;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -601,6 +606,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = F3U6T222L4;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

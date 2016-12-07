@@ -17,7 +17,6 @@ import KeychainSwift
 import BarCodeReaderView
 
 
-let kScanditBarcodeScannerAppKey = "GIEGzinOn+WlzV4rVcY/bPQbV92kGmLCMEbqDK1p/2o";
 
 class ViewController: UIViewController, PivoDelegate, BarcodeReaderViewDelegate, EstimationDelegate {
 
