@@ -82,7 +82,7 @@ class BatchViewController: UIViewController, PivoDelegate, UITableViewDataSource
             self.storiesTableView.reloadRows(at: [IndexPath(row: i, section: 0)], with: .fade)
             
             // Set stories to planned if not already started / finished / etc
-            if story.state == "unscheduled" {
+            if story.state == "unscheduled" || story.state == "unstarted" {
                 if let pivo = self.pivo {
                     pivo.set_story_state(story.id!, state: "planned", user: self.userId)
                     self.ding(sound: "Collect_Point_01")
@@ -92,8 +92,6 @@ class BatchViewController: UIViewController, PivoDelegate, UITableViewDataSource
         }
 
     }
-    
-
     
     
     func startScanner() {
